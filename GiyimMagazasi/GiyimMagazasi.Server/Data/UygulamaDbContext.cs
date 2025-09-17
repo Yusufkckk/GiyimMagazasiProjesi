@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using GiyimMagazasi.Server.Models;
 
 namespace GiyimMagazasi.Server.Data
 {
@@ -8,7 +9,7 @@ namespace GiyimMagazasi.Server.Data
         {
         }
 
-        // Modellerimizi buraya ekleyeceğiz.
-        // public DbSet<Product> Products { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }
