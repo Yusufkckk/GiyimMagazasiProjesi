@@ -2,9 +2,9 @@ import { fileURLToPath, URL } from 'node:url';
 
 import { defineConfig } from 'vite';
 import plugin from '@vitejs/plugin-react';
-import fs from 'fs';
-import path from 'path';
-import child_process from 'child_process';
+import fs from 'node:fs';
+import path from 'node:path';
+import child_process from 'node:child_process';
 import { env } from 'process';
 
 const baseFolder =
@@ -47,7 +47,7 @@ export default defineConfig({
     },
     server: {
         proxy: {
-            '^/weatherforecast': {
+            '^/api': { // Buradaki satýrý deðiþtiriyoruz
                 target,
                 secure: false
             }
@@ -58,4 +58,4 @@ export default defineConfig({
             cert: fs.readFileSync(certFilePath),
         }
     }
-})
+});

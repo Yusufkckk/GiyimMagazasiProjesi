@@ -9,7 +9,7 @@ public class ProductsController : ControllerBase
 {
     private readonly UygulamaDbContext _context;
 
-    public ProductsController(UygulamaDbContext context)
+    public ProductsController(UygulamaDbContext context) 
     {
         _context = context;
     }
@@ -17,7 +17,17 @@ public class ProductsController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
     {
-        return await _context.Products.ToListAsync();
+        // Veritabanından tüm ürünleri al
+        var products = await _context.Products.ToListAsync();
+
+        // Eğer veritabanında ürün yoksa boş bir liste döndür
+        if (products == null)
+        {
+            return new List<Product>();
+        }
+
+        // Ürünler varsa, onları döndür
+        return products;
     }
 
     [HttpPost]

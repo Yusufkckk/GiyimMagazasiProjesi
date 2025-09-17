@@ -3,11 +3,13 @@ using GiyimMagazasi.Server.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Veritabaný baðlamýný (DbContext) ekle ve hassas verileri loglamayý etkinleþtir
 builder.Services.AddDbContext<UygulamaDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 
 // Add services to the container.
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

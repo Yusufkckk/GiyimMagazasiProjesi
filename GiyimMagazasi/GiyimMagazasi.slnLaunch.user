@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Yeni Profil",
+    "Projects": [
+      {
+        "Path": "giyimmagazasi.client\\giyimmagazasi.client.esproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

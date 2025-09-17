@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GiyimMagazasi.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c300b13b497360c3d04c515ccb05132e91df4f62")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+04bdba8231b24cfba543c74dd42a2a4102937a8d")]
 [assembly: System.Reflection.AssemblyProductAttribute("GiyimMagazasi.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GiyimMagazasi.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
