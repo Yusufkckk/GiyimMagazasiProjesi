@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "giyimmagazasi.client", "giyimmagazasi.client\giyimmagazasi.client.esproj", "{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiyimMagazasi.Server", "GiyimMagazasi.Server\GiyimMagazasi.Server.csproj", "{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7DF5A1E4-389A-4BDC-8EE7-E472971A424D}
+	EndGlobalSection
+EndGlobal
