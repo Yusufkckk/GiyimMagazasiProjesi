@@ -3,7 +3,7 @@ using GiyimMagazasi.Server.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Veritabanı bağlamını (DbContext) ekle ve hassas verileri loglamayı etkinleştir
+// Veritabanï¿½ baï¿½lamï¿½nï¿½ (DbContext) ekle ve hassas verileri loglamayï¿½ etkinleï¿½tir
 builder.Services.AddDbContext<UygulamaDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
@@ -25,6 +25,11 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseDeveloperExceptionPage(); // GeliÅŸtirme ortamÄ±nda detaylÄ± hata sayfasÄ±nÄ± gÃ¶ster
+}
+else
+{
+    app.UseExceptionHandler("/Error"); // Ãœretim ortamÄ±nda genel hata sayfasÄ±na yÃ¶nlendir
 }
 
 app.UseHttpsRedirection();
