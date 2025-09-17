@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import ProductCard from './ProductCard';
 import './App.css';
+import type { Product } from './types/Product';
 
 function App() {
-    const [products, setProducts] = useState<any[]>([]);
+    const [products, setProducts] = useState<Product[]>([]); // 'any' yerine 'Product' kullanýn
 
     useEffect(() => {
         fetch('/api/products')
@@ -24,7 +25,7 @@ function App() {
 
     return (
         <div className="container">
-            <h1>Giyim Maðazasý</h1>
+            <h1>KOCAK FASHION</h1>
             <div className="product-list">
                 {products.map(product => (
                     <ProductCard key={product.id} product={product} />

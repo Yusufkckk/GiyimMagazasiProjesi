@@ -1,4 +1,6 @@
-const ProductCard = ({ product }: { product: any }) => {
+import type { Product } from './types/Product'; // Yeni eklenen satýr
+
+const ProductCard = ({ product }: { product: Product }) => { // 'any' yerine 'Product' kullanýn
     return (
         <div className="product-card">
             <img src={product.imageUrl} alt={product.name} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />

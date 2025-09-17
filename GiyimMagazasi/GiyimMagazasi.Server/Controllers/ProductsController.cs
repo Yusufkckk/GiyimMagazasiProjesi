@@ -9,7 +9,7 @@ public class ProductsController : ControllerBase
 {
     private readonly UygulamaDbContext _context;
 
-    public ProductsController(UygulamaDbContext context) 
+    public ProductsController(UygulamaDbContext context)
     {
         _context = context;
     }
@@ -17,18 +17,52 @@ public class ProductsController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
     {
-        // Veritabanından tüm ürünleri al
-        var products = await _context.Products.ToListAsync();
+        return await _context.Products.ToListAsync();
+    }
 
-        // Eğer veritabanında ürün yoksa boş bir liste döndür
-        if (products == null)
+    // Ürünü Id'ye göre getirme metodu (opsiyonel ama kullanışlı)
+    [HttpGet("{id}")]
+    public async Task<ActionResult<Product>> GetProduct(int id)
+    {
+        var product = await _context.Products.FindAsync(id);
+
+        if (product == null)
         {
-            return new List<Product>();
+            return NotFound();
         }
 
-        // Ürünler varsa, onları döndür
-        return products;
+        return product;
     }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> PutProduct(int id, Product product)
+    {
+        if (id != product.Id)
+        {
+            return BadRequest();
+        }
+
+        _context.Entry(product).State = EntityState.Modified;
+
+        try
+        {
+            await _context.SaveChangesAsync();
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            if (!ProductExists(id))
+            {
+                return NotFound();
+            }
+            else
+            {
+                throw;
+            }
+        }
+
+        return NoContent();
+    }
+
 
     [HttpPost]
     public async Task<ActionResult<Product>> PostProduct(Product product)
@@ -38,5 +72,25 @@ public class ProductsController : ControllerBase
         return CreatedAtAction("GetProducts", new { id = product.Id }, product);
     }
 
+    // Ürünü Id'ye göre silme metodu
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteProduct(int id)
+    {
+        var product = await _context.Products.FindAsync(id);
+        if (product == null)
+        {
+            return NotFound();
+        }
 
+        _context.Products.Remove(product);
+        await _context.SaveChangesAsync();
+
+        return NoContent();
+    }
+
+
+    private bool ProductExists(int id)
+    {
+        return _context.Products.Any(e => e.Id == id);
+    }
 }
