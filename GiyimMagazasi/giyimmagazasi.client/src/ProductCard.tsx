@@ -1,13 +1,19 @@
-import type { Product } from './types/Product'; // Yeni eklenen satýr
+import React from 'react';
+import type { Product } from './types/Product';
 
-const ProductCard = ({ product }: { product: Product }) => { // 'any' yerine 'Product' kullanýn
+interface ProductCardProps {
+    product: Product;
+}
+
+const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     return (
         <div className="product-card">
-            <img src={product.imageUrl} alt={product.name} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
-            <h3>{product.name}</h3>
-            <p>{product.description}</p>
-            <p><strong>Fiyat:</strong> ${product.price}</p>
-            <p><strong>Stok:</strong> {product.stock}</p>
+            <img src={product.imageUrl} alt={product.name} className="product-card-image" />
+            <div className="product-card-content">
+                <h3 className="product-card-name">{product.name}</h3>
+                <p className="product-card-details">{product.description}</p>
+                <p className="product-card-price">${product.price.toFixed(2)}</p>
+            </div>
         </div>
     );
 };

@@ -13,6 +13,8 @@ import { useCart } from './useCart';
 function HomePage() {
     const [products, setProducts] = useState<Product[]>([]);
     const [loading, setLoading] = useState(true);
+    const [filter, setFilter] = useState<string>('');
+    const [sort, setSort] = useState<string>('priceAsc');
 
     useEffect(() => {
         fetch('/api/products')
@@ -33,17 +35,51 @@ function HomePage() {
     }, []);
 
     if (loading) {
-        return <div>Ürünler yükleniyor...</div>;
+        return <div style={{ textAlign: 'center', padding: '50px' }}>Ürünler yükleniyor...</div>;
     }
 
+    const filteredAndSortedProducts = products
+        .filter(product => product.name.toLowerCase().includes(filter.toLowerCase()))
+        .sort((a, b) => {
+            if (sort === 'priceAsc') {
+                return a.price - b.price;
+            } else if (sort === 'priceDesc') {
+                return b.price - a.price;
+            }
+            return 0;
+        });
+
     return (
-        <div className="product-list">
-            {products.map(product => (
-                <Link to={`/products/${product.id}`} key={product.id}>
-                    <ProductCard product={product} />
-                </Link>
-            ))}
-        </div>
+        <>
+            <div className="container">
+                {/* Filtreleme ve Sýralama Bölümü */}
+                <section className="filter-sort-section">
+                    <input
+                        type="text"
+                        placeholder="Ürün Ara..."
+                        value={filter}
+                        onChange={(e) => setFilter(e.target.value)}
+                        style={{ padding: '10px', border: '1px solid #ccc', borderRadius: '5px', fontSize: '1em', flexGrow: 1, marginRight: '20px' }}
+                    />
+                    <select value={sort} onChange={(e) => setSort(e.target.value)}>
+                        <option value="priceAsc">Fiyata Göre Artan</option>
+                        <option value="priceDesc">Fiyata Göre Azalan</option>
+                    </select>
+                </section>
+
+                <div className="product-list">
+                    {filteredAndSortedProducts.length === 0 ? (
+                        <p style={{ textAlign: 'center', width: '100%' }}>Aradýðýnýz kriterlere uygun ürün bulunamadý.</p>
+                    ) : (
+                        filteredAndSortedProducts.map(product => (
+                            <Link to={`/products/${product.id}`} key={product.id}>
+                                <ProductCard product={product} />
+                            </Link>
+                        ))
+                    )}
+                </div>
+            </div>
+        </>
     );
 }
 
@@ -58,7 +94,7 @@ function App() {
 
 // Yeni bileþen, sepet sayacýna eriþim için CartProvider'ýn içine yerleþtirildi
 const AppContent = () => {
-    const { itemCount } = useCart(); // useCart hook'u burada kullanýlýr
+    const { itemCount } = useCart();
 
     return (
         <Router>
@@ -67,7 +103,7 @@ const AppContent = () => {
                     <h1>Kocak Fashion</h1>
                     <nav>
                         <Link to="/">Anasayfa</Link>
-                        <Link to="/cart">Sepetim ({itemCount})</Link> {/* Sayaç buraya eklendi */}
+                        <Link to="/cart">Sepetim ({itemCount})</Link>
                     </nav>
                 </div>
                 <Routes>
