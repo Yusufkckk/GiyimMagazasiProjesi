@@ -8,12 +8,8 @@ interface CartItem {
     quantity: number;
 }
 
-// CartContextType artýk gereksiz, çünkü onu zaten CartContext dosyasýndan import ediyoruz.
-// Ancak kodun daha anlaþýlýr olmasý için býrakabiliriz.
-// interface CartContextType {
-//  cart: CartItem[];
-//  addToCart: (product: Product, quantity: number) => void;
-// }
+
+
 
 export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const [cart, setCart] = useState<CartItem[]>([]);
@@ -33,8 +29,12 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         });
     };
 
+    const removeFromCart = (productId: number) => {
+        setCart(prevCart => prevCart.filter(item => item.product.id !== productId));
+    };
+
     return (
-        <CartContext.Provider value={{ cart, addToCart }}>
+        <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
             {children}
         </CartContext.Provider>
     );

@@ -5,6 +5,7 @@ import type { Product } from './types/Product';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import ProductDetail from './ProductDetail';
 import { CartProvider } from './CartContext.tsx';
+import Cart from './Cart';
 
 
 // Ana sayfa için yeni bir bileþen oluþturuyoruz
@@ -51,12 +52,17 @@ function App() {
         <CartProvider>
             <Router>
                 <div className="container">
-                    <h1>Koçak Fashion</h1>
+                    <div className="header">
+                        <h1>Koçak Fashion</h1>
+                        <nav>
+                            <Link to="/">Anasayfa</Link>
+                            <Link to="/cart">Sepetim</Link> {/* Sepet linki eklendi */}
+                        </nav>
+                    </div>
                     <Routes>
                         <Route path="/" element={<HomePage />} />
                         <Route path="/products/:id" element={<ProductDetail />} />
-                        {/* Sepet bileþeni için bir rota ekleyebilirsiniz */}
-                        {/* <Route path="/cart" element={<Cart />} /> */}
+                        <Route path="/cart" element={<Cart />} /> {/* Yeni sepet rotasý eklendi */}
                     </Routes>
                 </div>
             </Router>

@@ -126,3 +126,81 @@
     .add-to-cart-button:hover {
         background-color: #0056b3;
     }
+
+/* Sepet Kapsayıcısı */
+.cart-container {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+    /* Sepet Başlığı */
+    .cart-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+/* Sepet Öğeleri Listesi */
+.cart-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Her Bir Sepet Öğesi */
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+    .cart-item:last-child {
+        border-bottom: none;
+    }
+
+/* Ürün Resmi */
+.cart-item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+/* Ürün Bilgileri */
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-item-name {
+    font-weight: bold;
+    margin: 0;
+}
+
+.cart-item-price {
+    color: #888;
+    margin: 5px 0;
+}
+
+.cart-item-quantity {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* Sepet Silme Butonu */
+.remove-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.9em;
+    margin-left: 20px;
+    transition: background-color 0.3s ease;
+}
+
+    .remove-button:hover {
+        background-color: #e60000;
+    }

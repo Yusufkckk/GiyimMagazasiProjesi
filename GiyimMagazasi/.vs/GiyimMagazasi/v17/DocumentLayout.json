@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.client\\src\\usecart.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|solutionrelative:giyimmagazasi.client\\src\\usecart.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.client\\src\\cart.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|solutionrelative:giyimmagazasi.client\\src\\cart.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.client\\src\\cartcontext.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
@@ -15,16 +15,20 @@
       "RelativeMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|solutionrelative:giyimmagazasi.client\\src\\cartcontext.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.client\\src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|solutionrelative:giyimmagazasi.client\\src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.client\\src\\usecart.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|solutionrelative:giyimmagazasi.client\\src\\usecart.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.client\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|solutionrelative:giyimmagazasi.client\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.client\\src\\productdetail.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|solutionrelative:giyimmagazasi.client\\src\\productdetail.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.client\\src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|solutionrelative:giyimmagazasi.client\\src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.client\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -54,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,26 +74,39 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Cart.tsx",
+              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\Cart.tsx",
+              "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\Cart.tsx",
+              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\Cart.tsx",
+              "RelativeToolTip": "giyimmagazasi.client\\src\\Cart.tsx",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAewCIAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-09-19T08:36:42.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "CartContext.ts",
               "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\CartContext.ts",
               "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\CartContext.ts",
               "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\CartContext.ts",
               "RelativeToolTip": "giyimmagazasi.client\\src\\CartContext.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2025-09-19T08:17:24.528Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "useCart.ts",
               "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\useCart.ts",
               "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\useCart.ts",
               "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\useCart.ts",
               "RelativeToolTip": "giyimmagazasi.client\\src\\useCart.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2025-09-19T08:13:21.783Z",
               "EditorCaption": ""
@@ -102,40 +119,40 @@
               "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\CartContext.tsx",
               "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\CartContext.tsx",
               "RelativeToolTip": "giyimmagazasi.client\\src\\CartContext.tsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAewCcAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2025-09-19T07:58:56.23Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "App.tsx",
               "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\App.tsx",
               "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\App.tsx",
               "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\App.tsx",
               "RelativeToolTip": "giyimmagazasi.client\\src\\App.tsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAQwDIAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2025-09-17T13:38:26.595Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "App.css",
               "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\App.css",
               "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\App.css",
               "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\App.css",
               "RelativeToolTip": "giyimmagazasi.client\\src\\App.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGwAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAALAAAAAAAAAAAAAiwMAAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-09-19T07:50:19.772Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "package.json",
               "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\package.json",
               "RelativeDocumentMoniker": "giyimmagazasi.client\\package.json",
@@ -147,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "ProductDetail.tsx",
               "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\ProductDetail.tsx",
               "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\ProductDetail.tsx",
@@ -155,12 +172,11 @@
               "RelativeToolTip": "giyimmagazasi.client\\src\\ProductDetail.tsx",
               "ViewState": "AgIAAC0AAAAAAAAAAAAAAEUAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-09-19T07:23:33.144Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T07:23:33.144Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "ProductCard.tsx",
               "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\ProductCard.tsx",
               "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\ProductCard.tsx",
@@ -172,7 +188,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Product.ts",
               "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\types\\Product.ts",
               "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\types\\Product.ts",
@@ -184,7 +200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "GiyimMagazasi.Server\\Controllers\\ProductsController.cs",
@@ -196,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Program.cs",
               "RelativeDocumentMoniker": "GiyimMagazasi.Server\\Program.cs",
