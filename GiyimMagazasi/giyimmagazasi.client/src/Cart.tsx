@@ -1,13 +1,13 @@
-import { useCart } from './useCart';
+ï»¿import { useCart } from './useCart';
 
 const Cart = () => {
-    const { cart, removeFromCart, updateQuantity, clearCart, cartTotal } = useCart(); // clearCart'ý içe aktar
+    const { cart, removeFromCart, updateQuantity, clearCart, cartTotal } = useCart(); // clearCart'Ä± iÃ§e aktar
 
     return (
         <div className="cart-container">
             <h2>Sepetim</h2>
             {cart.length === 0 ? (
-                <p style={{ textAlign: 'center' }}>Sepetinizde ürün bulunmamaktadýr.</p>
+                <p style={{ textAlign: 'center' }}>Sepetinizde Ã¼rÃ¼n bulunmamaktadÄ±r.</p>
             ) : (
                 <ul className="cart-list">
                     {cart.map((item) => (
@@ -36,11 +36,11 @@ const Cart = () => {
                     ))}
                 </ul>
             )}
-            {/* Sepet toplamýný ve boþaltma butonunu gösteren bölüm */}
+            {/* Sepet toplamÄ±nÄ± ve boÅŸaltma butonunu gÃ¶steren bÃ¶lÃ¼m */}
             {cart.length > 0 && (
                 <div className="cart-summary">
                     <h3>Toplam: ${cartTotal.toFixed(2)}</h3>
-                    <button onClick={clearCart} className="clear-cart-button">Sepeti Boþalt</button>
+                    <button onClick={clearCart} className="clear-cart-button">Sepeti BoÅŸalt</button>
                 </div>
             )}
         </div>
