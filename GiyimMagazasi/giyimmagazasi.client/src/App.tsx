@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import ProductDetail from './ProductDetail';
 import { CartProvider } from './CartContext.tsx';
 import Cart from './Cart';
+import { useCart } from './useCart';
 
 
 // Ana sayfa için yeni bir bileþen oluþturuyoruz
@@ -46,28 +47,37 @@ function HomePage() {
     );
 }
 
-// Ana App bileþeni artýk sadece yönlendirmeyi yönetiyor
+// Ana App bileþeni sadece CartProvider'ý sarar
 function App() {
     return (
         <CartProvider>
-            <Router>
-                <div className="container">
-                    <div className="header">
-                        <h1>Koçak Fashion</h1>
-                        <nav>
-                            <Link to="/">Anasayfa</Link>
-                            <Link to="/cart">Sepetim</Link> {/* Sepet linki eklendi */}
-                        </nav>
-                    </div>
-                    <Routes>
-                        <Route path="/" element={<HomePage />} />
-                        <Route path="/products/:id" element={<ProductDetail />} />
-                        <Route path="/cart" element={<Cart />} /> {/* Yeni sepet rotasý eklendi */}
-                    </Routes>
-                </div>
-            </Router>
+            <AppContent />
         </CartProvider>
     );
 }
+
+// Yeni bileþen, sepet sayacýna eriþim için CartProvider'ýn içine yerleþtirildi
+const AppContent = () => {
+    const { itemCount } = useCart(); // useCart hook'u burada kullanýlýr
+
+    return (
+        <Router>
+            <div className="container">
+                <div className="header">
+                    <h1>Kocak Fashion</h1>
+                    <nav>
+                        <Link to="/">Anasayfa</Link>
+                        <Link to="/cart">Sepetim ({itemCount})</Link> {/* Sayaç buraya eklendi */}
+                    </nav>
+                </div>
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/products/:id" element={<ProductDetail />} />
+                    <Route path="/cart" element={<Cart />} />
+                </Routes>
+            </div>
+        </Router>
+    );
+};
 
 export default App;

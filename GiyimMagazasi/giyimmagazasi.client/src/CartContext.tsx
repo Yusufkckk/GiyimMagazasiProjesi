@@ -33,8 +33,31 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         setCart(prevCart => prevCart.filter(item => item.product.id !== productId));
     };
 
+    const updateQuantity = (productId: number, newQuantity: number) => {
+        setCart(prevCart => {
+            if (newQuantity <= 0) {
+                return prevCart.filter(item => item.product.id !== productId);
+            }
+
+            return prevCart.map(item =>
+                item.product.id === productId
+                    ? { ...item, quantity: newQuantity }
+                    : item
+            );
+        });
+    };
+
+    // Sepeti temizleme fonksiyonu eklendi
+    const clearCart = () => {
+        setCart([]);
+    };
+
+    const cartTotal = cart.reduce((total, item) => total + item.product.price * item.quantity, 0);
+
+    const itemCount = cart.reduce((total, item) => total + item.quantity, 0);
+
     return (
-        <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+        <CartContext.Provider value={{ cart, addToCart, removeFromCart, updateQuantity, clearCart, cartTotal, itemCount }}>
             {children}
         </CartContext.Provider>
     );

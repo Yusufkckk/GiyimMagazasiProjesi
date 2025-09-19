@@ -1,7 +1,7 @@
 import { useCart } from './useCart';
 
 const Cart = () => {
-    const { cart, removeFromCart } = useCart(); // removeFromCart'ý içe aktar
+    const { cart, removeFromCart, updateQuantity, clearCart, cartTotal } = useCart(); // clearCart'ý içe aktar
 
     return (
         <div className="cart-container">
@@ -21,7 +21,11 @@ const Cart = () => {
                                 <p className="cart-item-name">{item.product.name}</p>
                                 <p className="cart-item-price">Fiyat: ${item.product.price.toFixed(2)}</p>
                             </div>
-                            <span className="cart-item-quantity">Adet: {item.quantity}</span>
+                            <div className="quantity-controls">
+                                <button onClick={() => updateQuantity(item.product.id, item.quantity - 1)}>-</button>
+                                <span className="cart-item-quantity">{item.quantity}</span>
+                                <button onClick={() => updateQuantity(item.product.id, item.quantity + 1)}>+</button>
+                            </div>
                             <button
                                 onClick={() => removeFromCart(item.product.id)}
                                 className="remove-button"
@@ -31,6 +35,13 @@ const Cart = () => {
                         </li>
                     ))}
                 </ul>
+            )}
+            {/* Sepet toplamýný ve boþaltma butonunu gösteren bölüm */}
+            {cart.length > 0 && (
+                <div className="cart-summary">
+                    <h3>Toplam: ${cartTotal.toFixed(2)}</h3>
+                    <button onClick={clearCart} className="clear-cart-button">Sepeti Boþalt</button>
+                </div>
             )}
         </div>
     );
