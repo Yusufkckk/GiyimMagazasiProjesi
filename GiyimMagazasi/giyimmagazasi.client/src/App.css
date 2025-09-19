@@ -22,3 +22,8 @@
     .product-card img {
         border-radius: 4px;
     }
+
+.product-list a {
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    color: inherit; /* Yazı rengini ebeveyn elementten miras alır (siyah yapar) */
+}
