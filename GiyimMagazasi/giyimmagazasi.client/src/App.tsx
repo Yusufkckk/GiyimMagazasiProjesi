@@ -1,9 +1,11 @@
-import { useEffect, useState } from 'react'; // React importunu kaldýrýn
+import { useEffect, useState } from 'react';
 import ProductCard from './ProductCard';
 import './App.css';
 import type { Product } from './types/Product';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import ProductDetail from './ProductDetail';
+import { CartProvider } from './CartContext.tsx';
+
 
 // Ana sayfa için yeni bir bileþen oluþturuyoruz
 function HomePage() {
@@ -46,15 +48,19 @@ function HomePage() {
 // Ana App bileþeni artýk sadece yönlendirmeyi yönetiyor
 function App() {
     return (
-        <Router>
-            <div className="container">
-                <h1>Koçak Fashion</h1>
-                <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/products/:id" element={<ProductDetail />} />
-                </Routes>
-            </div>
-        </Router>
+        <CartProvider>
+            <Router>
+                <div className="container">
+                    <h1>Koçak Fashion</h1>
+                    <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/products/:id" element={<ProductDetail />} />
+                        {/* Sepet bileþeni için bir rota ekleyebilirsiniz */}
+                        {/* <Route path="/cart" element={<Cart />} /> */}
+                    </Routes>
+                </div>
+            </Router>
+        </CartProvider>
     );
 }
 

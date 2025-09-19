@@ -3,7 +3,7 @@
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "target": "ES2022",
     "useDefineForClassFields": true,
-    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "lib": [ "ES2022", "DOM", "DOM.Iterable" ],
     "module": "ESNext",
     "skipLibCheck": true,
 
@@ -15,6 +15,9 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
+    /* Yeni ayar: ES modülleri için uyumluluk sağlar */
+    "esModuleInterop": true,
+
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
@@ -23,5 +26,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": [ "src" ]
 }
