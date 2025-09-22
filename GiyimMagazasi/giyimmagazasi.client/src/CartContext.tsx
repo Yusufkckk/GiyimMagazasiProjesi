@@ -1,4 +1,4 @@
-import * as React from 'react'; // Bu satýrý kullan
+ï»¿import * as React from 'react'; // Bu satÄ±rÄ± kullan
 import { useState } from 'react';
 import type { ReactNode } from 'react';
 import type { Product } from './types/Product';

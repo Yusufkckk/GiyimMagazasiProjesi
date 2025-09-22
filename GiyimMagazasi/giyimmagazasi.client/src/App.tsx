@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+ï»¿import { useEffect, useState } from 'react';
 import ProductCard from './ProductCard';
 import './App.css';
 import type { Product } from './types/Product';
@@ -7,9 +7,11 @@ import ProductDetail from './ProductDetail';
 import { CartProvider } from './CartContext.tsx';
 import Cart from './Cart';
 import { useCart } from './useCart';
+import { logout, isAuthenticated } from './services/authService';
+import AuthPage from './pages/AuthPage';
 
 
-// Ana sayfa için yeni bir bileþen oluþturuyoruz
+
 function HomePage() {
     const [products, setProducts] = useState<Product[]>([]);
     const [loading, setLoading] = useState(true);
@@ -20,7 +22,7 @@ function HomePage() {
         fetch('/api/products')
             .then(response => {
                 if (!response.ok) {
-                    throw new Error(`HTTP hatasý! Durum kodu: ${response.status}`);
+                    throw new Error(`HTTP hatasÄ±! Durum kodu: ${response.status}`);
                 }
                 return response.json();
             })
@@ -29,13 +31,13 @@ function HomePage() {
                 setLoading(false);
             })
             .catch(error => {
-                console.error("Veri çekme sýrasýnda bir hata oluþtu:", error);
+                console.error("Veri Ã§ekme sÄ±rasÄ±nda bir hata oluÅŸtu:", error);
                 setLoading(false);
             });
     }, []);
 
     if (loading) {
-        return <div style={{ textAlign: 'center', padding: '50px' }}>Ürünler yükleniyor...</div>;
+        return <div style={{ textAlign: 'center', padding: '50px' }}>ÃœrÃ¼nler yÃ¼kleniyor...</div>;
     }
 
     const filteredAndSortedProducts = products
@@ -52,24 +54,22 @@ function HomePage() {
     return (
         <>
             <div className="container">
-                {/* Filtreleme ve Sýralama Bölümü */}
                 <section className="filter-sort-section">
                     <input
                         type="text"
-                        placeholder="Ürün Ara..."
+                        placeholder="ÃœrÃ¼n Ara..."
                         value={filter}
                         onChange={(e) => setFilter(e.target.value)}
                         style={{ padding: '10px', border: '1px solid #ccc', borderRadius: '5px', fontSize: '1em', flexGrow: 1, marginRight: '20px' }}
                     />
                     <select value={sort} onChange={(e) => setSort(e.target.value)}>
-                        <option value="priceAsc">Fiyata Göre Artan</option>
-                        <option value="priceDesc">Fiyata Göre Azalan</option>
+                        <option value="priceAsc">Fiyata GÃ¶re Artan</option>
+                        <option value="priceDesc">Fiyata GÃ¶re Azalan</option>
                     </select>
                 </section>
-
                 <div className="product-list">
                     {filteredAndSortedProducts.length === 0 ? (
-                        <p style={{ textAlign: 'center', width: '100%' }}>Aradýðýnýz kriterlere uygun ürün bulunamadý.</p>
+                        <p style={{ textAlign: 'center', width: '100%' }}>AradÄ±ÄŸÄ±nÄ±z kriterlere uygun Ã¼rÃ¼n bulunamadÄ±.</p>
                     ) : (
                         filteredAndSortedProducts.map(product => (
                             <Link to={`/products/${product.id}`} key={product.id}>
@@ -83,7 +83,6 @@ function HomePage() {
     );
 }
 
-// Ana App bileþeni sadece CartProvider'ý sarar
 function App() {
     return (
         <CartProvider>
@@ -92,9 +91,35 @@ function App() {
     );
 }
 
-// Yeni bileþen, sepet sayacýna eriþim için CartProvider'ýn içine yerleþtirildi
 const AppContent = () => {
     const { itemCount } = useCart();
+    const [isLoggedIn, setIsLoggedIn] = useState(isAuthenticated());
+    const [userEmail, setUserEmail] = useState('');
+
+    useEffect(() => {
+        const checkAuth = async () => {
+            const loggedIn = isAuthenticated();
+            setIsLoggedIn(loggedIn);
+            if (loggedIn) {
+                try {
+                    const userInfo = await getUserInfo();
+                    setUserEmail(userInfo.email);
+                } catch (error) {
+                    console.error('KullanÄ±cÄ± bilgisi alÄ±namadÄ±:', error);
+                    logout();
+                    setIsLoggedIn(false);
+                }
+            }
+        };
+        checkAuth();
+    }, []);
+
+    const handleSignOut = () => {
+        logout();
+        setIsLoggedIn(false);
+        setUserEmail('');
+        alert("BaÅŸarÄ±yla Ã§Ä±kÄ±ÅŸ yapÄ±ldÄ±!");
+    };
 
     return (
         <Router>
@@ -104,12 +129,21 @@ const AppContent = () => {
                     <nav>
                         <Link to="/">Anasayfa</Link>
                         <Link to="/cart">Sepetim ({itemCount})</Link>
+                        {isLoggedIn ? (
+                            <>
+                                <span style={{ marginRight: '15px' }}>HoÅŸ geldin, {userEmail}</span>
+                                <button onClick={handleSignOut} className="auth-button">Ã‡Ä±kÄ±ÅŸ Yap</button>
+                            </>
+                        ) : (
+                            <Link to="/auth" className="auth-button">GiriÅŸ Yap</Link>
+                        )}
                     </nav>
                 </div>
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/products/:id" element={<ProductDetail />} />
                     <Route path="/cart" element={<Cart />} />
+                    <Route path="/auth" element={<AuthPage onAuthChange={() => { setIsLoggedIn(isAuthenticated()); }} />} />
                 </Routes>
             </div>
         </Router>
