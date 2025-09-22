@@ -1,6 +1,6 @@
 ﻿// src/services/authService.ts
 
-const API_BASE_URL = 'https://localhost:7224/api/auth'; // Kendi API adresinle değiştir.
+const API_BASE_URL = 'https://localhost:61963/api/auth'; // Kendi API adresinle değiştir.
 
 export const login = async (email: string, password: string): Promise<string> => {
     try {
@@ -65,14 +65,33 @@ export const isAuthenticated = (): boolean => {
     return !!token;
 };
 
-// Opsiyonel: Kullanıcının adını almak için bir fonksiyon
+// Güncellenmiş getUserInfo fonksiyonu
 export const getUserInfo = async (): Promise<{ email: string }> => {
     const token = localStorage.getItem('user_token');
     if (!token) {
         throw new Error('Kullanıcı oturum açmamış.');
     }
 
-    // JWT token'ı decode ederek bilgileri alabilirsin.
-    // Şimdilik sadece mock bir veri döndürelim.
-    return { email: 'yusufkoçak@example.com' };
+    try {
+        const response = await fetch(`${API_BASE_URL}/me`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}` // Token'ı başlığa ekle
+            }
+        });
+
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.message || 'Kullanıcı bilgisi alınamadı.');
+        }
+
+        const data = await response.json();
+        return data; // Backend'den gelen veriyi direkt döndür
+    } catch (error) {
+        if (error instanceof Error) {
+            throw new Error(error.message);
+        }
+        throw new Error('Kullanıcı bilgisi alınamadı.');
+    }
 };

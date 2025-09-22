@@ -7,7 +7,7 @@ import ProductDetail from './ProductDetail';
 import { CartProvider } from './CartContext.tsx';
 import Cart from './Cart';
 import { useCart } from './useCart';
-import { logout, isAuthenticated } from './services/authService';
+import { logout, isAuthenticated, getUserInfo } from './services/authService';
 import AuthPage from './pages/AuthPage';
 
 
@@ -93,8 +93,8 @@ function App() {
 
 const AppContent = () => {
     const { itemCount } = useCart();
-    const [isLoggedIn, setIsLoggedIn] = useState(isAuthenticated());
-    const [userEmail, setUserEmail] = useState('');
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [userName, setUserName] = useState(''); // Kullanıcı adını tutmak için yeni durum
 
     useEffect(() => {
         const checkAuth = async () => {
@@ -103,11 +103,13 @@ const AppContent = () => {
             if (loggedIn) {
                 try {
                     const userInfo = await getUserInfo();
-                    setUserEmail(userInfo.email);
+                    const name = userInfo.email.split('@')[0];
+                    setUserName(name);
                 } catch (error) {
                     console.error('Kullanıcı bilgisi alınamadı:', error);
                     logout();
                     setIsLoggedIn(false);
+                    setUserName('');
                 }
             }
         };
@@ -117,34 +119,33 @@ const AppContent = () => {
     const handleSignOut = () => {
         logout();
         setIsLoggedIn(false);
-        setUserEmail('');
+        setUserName('');
         alert("Başarıyla çıkış yapıldı!");
     };
 
     return (
         <Router>
-            <div className="container">
+            <div className="main-content">
                 <div className="header">
                     <h1>Kocak Fashion</h1>
                     <nav>
                         <Link to="/">Anasayfa</Link>
                         <Link to="/cart">Sepetim ({itemCount})</Link>
                         {isLoggedIn ? (
-                            <>
-                                <span style={{ marginRight: '15px' }}>Hoş geldin, {userEmail}</span>
-                                <button onClick={handleSignOut} className="auth-button">Çıkış Yap</button>
-                            </>
+                            <button onClick={handleSignOut} className="logout-button">{userName} - Çıkış Yap</button>
                         ) : (
-                            <Link to="/auth" className="auth-button">Giriş Yap</Link>
+                            <Link to="/auth" className="login-button">Giriş Yap</Link>
                         )}
                     </nav>
                 </div>
-                <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/products/:id" element={<ProductDetail />} />
-                    <Route path="/cart" element={<Cart />} />
-                    <Route path="/auth" element={<AuthPage onAuthChange={() => { setIsLoggedIn(isAuthenticated()); }} />} />
-                </Routes>
+                <div className="container">
+                    <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/products/:id" element={<ProductDetail />} />
+                        <Route path="/cart" element={<Cart />} />
+                        <Route path="/auth" element={<AuthPage onAuthChange={() => { setIsLoggedIn(isAuthenticated()); }} />} />
+                    </Routes>
+                </div>
             </div>
         </Router>
     );

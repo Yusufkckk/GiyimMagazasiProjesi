@@ -10,14 +10,13 @@ namespace GiyimMagazasi.Server.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly UygulamaDbContext _context; // Veritabanı context'ini enjekte et
+        private readonly UygulamaDbContext _context;
 
         public AuthController(UygulamaDbContext context)
         {
             _context = context;
         }
 
-        // Kayıt olma (Register) endpoint'i
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] UserRegistrationModel model)
         {
@@ -29,7 +28,7 @@ namespace GiyimMagazasi.Server.Controllers
             var user = new User
             {
                 Email = model.Email,
-                Password = model.Password // NOT: Gerçek projede şifre mutlaka hashlenmeli!
+                Password = model.Password
             };
 
             _context.Users.Add(user);
@@ -38,7 +37,6 @@ namespace GiyimMagazasi.Server.Controllers
             return Ok(new { message = "Kullanıcı başarıyla kaydedildi." });
         }
 
-        // Giriş yapma (Login) endpoint'i
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] UserLoginModel model)
         {
@@ -49,24 +47,42 @@ namespace GiyimMagazasi.Server.Controllers
                 return Unauthorized(new { message = "Geçersiz e-posta veya şifre." });
             }
 
-            // Başarılı giriş sonrası token oluşturma (JWT)
-            // Şimdilik basit bir token döndürelim, daha sonra JWT'ye çevirebilirsin.
-            var token = Guid.NewGuid().ToString();
-
-            // Gerçek bir uygulamada bu token'ı veritabanına kaydedebilirsin.
-            // Şimdi sadece client'a gönderiyoruz.
+            var token = Guid.NewGuid().ToString(); // Basit bir token oluşturma
             return Ok(new { token, message = "Giriş başarılı." });
+        }
+
+        // Yeni uç nokta: Token'dan kullanıcı bilgilerini çekme
+        [HttpGet("me")]
+        public async Task<IActionResult> GetUserInfo()
+        {
+            // İsteğin başlığından token'ı oku. Gerçek senaryoda bu token doğrulanır.
+            var token = Request.Headers["Authorization"].FirstOrDefault()?.Replace("Bearer ", "");
+
+            if (string.IsNullOrEmpty(token))
+            {
+                return Unauthorized(new { message = "Token bulunamadı." });
+            }
+
+            // Basit bir örnek için, token'ı kullanıcının e-postası olarak kabul edelim.
+            // Gerçek senaryoda, bu token'dan kullanıcı ID'si alınıp veritabanı sorgusu yapılır.
+            var userEmail = "yusufkoçak@example.com"; // Burası mock veri
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == userEmail);
+
+            if (user == null)
+            {
+                return NotFound(new { message = "Kullanıcı bulunamadı." });
+            }
+
+            return Ok(new { email = user.Email });
         }
     }
 
-    // Kullanıcı kayıt modeli
     public class UserRegistrationModel
     {
         public string Email { get; set; }
         public string Password { get; set; }
     }
 
-    // Kullanıcı giriş modeli
     public class UserLoginModel
     {
         public string Email { get; set; }
