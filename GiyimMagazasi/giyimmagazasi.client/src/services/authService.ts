@@ -55,6 +55,10 @@ export const register = async (email: string, password: string): Promise<boolean
         throw new Error('Bir ağ hatası oluştu.');
     }
 };
+export interface UserInfo {
+    email: string;
+    role: string;
+}
 
 export const logout = (): void => {
     localStorage.removeItem('user_token');
@@ -65,8 +69,8 @@ export const isAuthenticated = (): boolean => {
     return !!token;
 };
 
-// Güncellenmiş getUserInfo fonksiyonu
-export const getUserInfo = async (): Promise<{ email: string }> => {
+// getUserInfo fonksiyonunun, UserInfo tipinde bir Promise döndüreceğini belirt
+export const getUserInfo = async (): Promise<UserInfo> => {
     const token = localStorage.getItem('user_token');
     if (!token) {
         throw new Error('Kullanıcı oturum açmamış.');
@@ -77,7 +81,7 @@ export const getUserInfo = async (): Promise<{ email: string }> => {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}` // Token'ı başlığa ekle
+                'Authorization': `Bearer ${token}`
             }
         });
 
@@ -87,7 +91,12 @@ export const getUserInfo = async (): Promise<{ email: string }> => {
         }
 
         const data = await response.json();
-        return data; // Backend'den gelen veriyi direkt döndür
+        // data nesnesinin hem email hem de role içerdiğinden emin olmalısın
+        if (!data.email || !data.role) {
+            throw new Error('Kullanıcı verisi eksik.');
+        }
+
+        return data; // Backend'den gelen veriyi direkt döndür (doğru tipte olduğu varsayılarak)
     } catch (error) {
         if (error instanceof Error) {
             throw new Error(error.message);

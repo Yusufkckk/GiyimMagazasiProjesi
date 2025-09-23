@@ -8,12 +8,12 @@ import { CartProvider } from './CartContext.tsx';
 import Cart from './Cart';
 import { useCart } from './useCart';
 import { logout, isAuthenticated, getUserInfo } from './services/authService';
+import type { UserInfo } from './services/authService';
 import AuthPage from './pages/AuthPage';
 import AdminPage from './AdminPage';
 
-
-
-function HomePage() {
+// Ana sayfa içeriğini doğrudan App.tsx'in içinde tanımlıyoruz
+function HomePageContent() {
     const [products, setProducts] = useState<Product[]>([]);
     const [loading, setLoading] = useState(true);
     const [filter, setFilter] = useState<string>('');
@@ -95,7 +95,8 @@ function App() {
 const AppContent = () => {
     const { itemCount } = useCart();
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [userName, setUserName] = useState(''); // Kullanıcı adını tutmak için yeni durum
+    const [userName, setUserName] = useState('');
+    const [userRole, setUserRole] = useState('');
 
     useEffect(() => {
         const checkAuth = async () => {
@@ -103,25 +104,29 @@ const AppContent = () => {
             setIsLoggedIn(loggedIn);
             if (loggedIn) {
                 try {
-                    const userInfo = await getUserInfo();
+                    const userInfo: UserInfo = await getUserInfo();
                     const name = userInfo.email.split('@')[0];
                     setUserName(name);
+                    setUserRole(userInfo.role);
                 } catch (error) {
                     console.error('Kullanıcı bilgisi alınamadı:', error);
-                    logout();
-                    setIsLoggedIn(false);
-                    setUserName('');
                 }
             }
         };
         checkAuth();
     }, []);
 
+    const handleAuthChange = () => {
+        setIsLoggedIn(isAuthenticated());
+    };
+
     const handleSignOut = () => {
         logout();
         setIsLoggedIn(false);
         setUserName('');
-        alert("Başarıyla çıkış yapıldı!");
+        setUserRole('');
+        // alert yerine konsol logu kullanıldı
+        console.log("Başarıyla çıkış yapıldı!");
     };
 
     return (
@@ -132,7 +137,7 @@ const AppContent = () => {
                     <nav>
                         <Link to="/">Anasayfa</Link>
                         <Link to="/cart">Sepetim ({itemCount})</Link>
-                        {isLoggedIn && <Link to="/admin">Yönetim Paneli</Link>} {/* Sadece giriş yapıldığında göster */}
+                        {userRole === 'admin' && <Link to="/admin">Yönetim Paneli</Link>}
                         {isLoggedIn ? (
                             <button onClick={handleSignOut} className="logout-button">{userName} - Çıkış Yap</button>
                         ) : (
@@ -142,11 +147,11 @@ const AppContent = () => {
                 </div>
                 <div className="container">
                     <Routes>
-                        <Route path="/" element={<HomePage />} />
+                        <Route path="/" element={<HomePageContent />} />
                         <Route path="/products/:id" element={<ProductDetail />} />
                         <Route path="/cart" element={<Cart />} />
-                        <Route path="/auth" element={<AuthPage onAuthChange={() => { setIsLoggedIn(isAuthenticated()); }} />} />
-                        {isLoggedIn && <Route path="/admin" element={<AdminPage />} />} {/* Sadece giriş yapıldığında erişilebilir */}
+                        <Route path="/auth" element={<AuthPage onAuthChange={handleAuthChange} />} />
+                        {userRole === 'admin' && <Route path="/admin" element={<AdminPage />} />}
                     </Routes>
                 </div>
             </div>

@@ -1,5 +1,4 @@
-import { fileURLToPath, URL } from 'node:url';
-
+ï»¿import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vite';
 import plugin from '@vitejs/plugin-react';
 import fs from 'node:fs';
@@ -47,7 +46,7 @@ export default defineConfig({
     },
     server: {
         proxy: {
-            '^/api': { // Buradaki satýrý deðiþtiriyoruz
+            '^/api': {
                 target,
                 secure: false
             }

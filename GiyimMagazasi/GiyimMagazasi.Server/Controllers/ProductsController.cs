@@ -1,10 +1,12 @@
 ﻿using GiyimMagazasi.Server.Data;
 using GiyimMagazasi.Server.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 [Route("api/[controller]")]
 [ApiController]
+// [Authorize(Roles = "admin")] <-- Bu satırı siliyoruz
 public class ProductsController : ControllerBase
 {
     private readonly UygulamaDbContext _context;
@@ -14,13 +16,13 @@ public class ProductsController : ControllerBase
         _context = context;
     }
 
+    // Herkesin görebilmesi için bu metodun üstünde yetkilendirme etiketi yok.
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
     {
         return await _context.Products.ToListAsync();
     }
 
-    // Ürünü Id'ye göre getirme metodu (opsiyonel ama kullanışlı)
     [HttpGet("{id}")]
     public async Task<ActionResult<Product>> GetProduct(int id)
     {
@@ -34,6 +36,8 @@ public class ProductsController : ControllerBase
         return product;
     }
 
+    // Yalnızca adminlerin ürünleri güncelleyebilmesi için yetkilendirme ekledik
+    [Authorize(Roles = "admin")]
     [HttpPut("{id}")]
     public async Task<IActionResult> PutProduct(int id, Product product)
     {
@@ -63,7 +67,8 @@ public class ProductsController : ControllerBase
         return NoContent();
     }
 
-
+    // Yalnızca adminlerin yeni ürün ekleyebilmesi için yetkilendirme ekledik
+    [Authorize(Roles = "admin")]
     [HttpPost]
     public async Task<ActionResult<Product>> PostProduct(Product product)
     {
@@ -72,7 +77,8 @@ public class ProductsController : ControllerBase
         return CreatedAtAction("GetProducts", new { id = product.Id }, product);
     }
 
-    // Ürünü Id'ye göre silme metodu
+    // Yalnızca adminlerin ürün silebilmesi için yetkilendirme ekledik
+    [Authorize(Roles = "admin")]
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteProduct(int id)
     {
@@ -87,7 +93,6 @@ public class ProductsController : ControllerBase
 
         return NoContent();
     }
-
 
     private bool ProductExists(int id)
     {

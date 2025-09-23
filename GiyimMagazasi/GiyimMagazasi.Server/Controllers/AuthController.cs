@@ -1,8 +1,13 @@
-﻿using GiyimMagazasi.Server.Models; // Model sınıfların için
+﻿using GiyimMagazasi.Server.Models;
 using GiyimMagazasi.Server.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
+using System.IdentityModel.Tokens.Jwt;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace GiyimMagazasi.Server.Controllers
 {
@@ -11,10 +16,12 @@ namespace GiyimMagazasi.Server.Controllers
     public class AuthController : ControllerBase
     {
         private readonly UygulamaDbContext _context;
+        private readonly IConfiguration _configuration; // IConfiguration'ı ekle
 
-        public AuthController(UygulamaDbContext context)
+        public AuthController(UygulamaDbContext context, IConfiguration configuration)
         {
             _context = context;
+            _configuration = configuration;
         }
 
         [HttpPost("register")]
@@ -28,7 +35,8 @@ namespace GiyimMagazasi.Server.Controllers
             var user = new User
             {
                 Email = model.Email,
-                Password = model.Password
+                Password = model.Password,
+                Role = "user"
             };
 
             _context.Users.Add(user);
@@ -40,40 +48,68 @@ namespace GiyimMagazasi.Server.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] UserLoginModel model)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == model.Email && u.Password == model.Password);
-
-            if (user == null)
+            try
             {
-                return Unauthorized(new { message = "Geçersiz e-posta veya şifre." });
-            }
+                var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == model.Email && u.Password == model.Password);
 
-            var token = Guid.NewGuid().ToString(); // Basit bir token oluşturma
-            return Ok(new { token, message = "Giriş başarılı." });
+                if (user == null)
+                {
+                    return Unauthorized(new { message = "Geçersiz e-posta veya şifre." });
+                }
+
+                var claims = new[]
+                {
+            new Claim(ClaimTypes.Name, user.Email),
+            new Claim(ClaimTypes.Role, user.Role),
+            new Claim(ClaimTypes.Email, user.Email)
+        };
+
+                var token = CreateToken(claims);
+                return Ok(new { token = new JwtSecurityTokenHandler().WriteToken(token), message = "Giriş başarılı." });
+            }
+            catch (Exception ex)
+            {
+                // Olası bir hata durumunda (örneğin veritabanı bağlantı sorunu)
+                return StatusCode(500, new { message = "Sunucu hatası: " + ex.Message });
+            }
         }
 
-        // Yeni uç nokta: Token'dan kullanıcı bilgilerini çekme
+        [Authorize]
         [HttpGet("me")]
         public async Task<IActionResult> GetUserInfo()
         {
-            // İsteğin başlığından token'ı oku. Gerçek senaryoda bu token doğrulanır.
-            var token = Request.Headers["Authorization"].FirstOrDefault()?.Replace("Bearer ", "");
+            var userEmail = User.FindFirstValue(ClaimTypes.Email);
 
-            if (string.IsNullOrEmpty(token))
+            if (string.IsNullOrEmpty(userEmail))
             {
-                return Unauthorized(new { message = "Token bulunamadı." });
+                return Unauthorized(new { message = "E-posta bilgisi token'da bulunamadı." });
             }
 
-            // Basit bir örnek için, token'ı kullanıcının e-postası olarak kabul edelim.
-            // Gerçek senaryoda, bu token'dan kullanıcı ID'si alınıp veritabanı sorgusu yapılır.
-            var userEmail = "yusufkoçak@example.com"; // Burası mock veri
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == userEmail);
+            var user = await _context.Users.SingleOrDefaultAsync(u => u.Email == userEmail);
 
             if (user == null)
             {
                 return NotFound(new { message = "Kullanıcı bulunamadı." });
             }
 
-            return Ok(new { email = user.Email });
+            return Ok(new { email = user.Email, role = user.Role });
+        }
+
+        private JwtSecurityToken CreateToken(IEnumerable<Claim> claims)
+        {
+            // Anahtar, Issuer ve Audience değerlerini appsettings.json'dan al
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var token = new JwtSecurityToken(
+                issuer: _configuration["Jwt:Issuer"],
+                audience: _configuration["Jwt:Audience"],
+                claims: claims,
+                expires: DateTime.Now.AddDays(1),
+                signingCredentials: creds
+            );
+
+            return token;
         }
     }
 

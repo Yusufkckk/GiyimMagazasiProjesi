@@ -1,9 +1,12 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using GiyimMagazasi.Server.Data;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Veritaban� ba�lam�n� (DbContext) ekle ve hassas verileri loglamay� etkinle�tir
+// Veritabanı bağlamını (DbContext) ekle ve hassas verileri loglamayı etkinleştir
 builder.Services.AddDbContext<UygulamaDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
@@ -15,6 +18,24 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+// JWT Taşıyıcı Kimlik Doğrulama Hizmeti
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+        };
+    });
+
+
 var app = builder.Build();
 
 app.UseDefaultFiles();
@@ -25,14 +46,19 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-    app.UseDeveloperExceptionPage(); // Geliştirme ortamında detaylı hata sayfasını göster
+    app.UseDeveloperExceptionPage();
 }
 else
 {
-    app.UseExceptionHandler("/Error"); // Üretim ortamında genel hata sayfasına yönlendir
+    app.UseExceptionHandler("/Error");
 }
 
 app.UseHttpsRedirection();
+
+
+// Önemli: UseAuthentication() UseAuthorization()dan önce gelmeli
+app.UseAuthentication();
+
 
 app.UseAuthorization();
 

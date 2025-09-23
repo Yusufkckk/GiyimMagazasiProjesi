@@ -1,6 +1,4 @@
-﻿// src/pages/AuthPage.tsx
-
-import React, { useState } from 'react';
+﻿import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { login, register } from '../services/authService';
 import './AuthPage.css';
@@ -22,9 +20,9 @@ const AuthPage: React.FC<AuthPageProps> = ({ onAuthChange }) => {
             navigate('/');
         } catch (error: unknown) {
             if (error instanceof Error) {
-                alert('Giriş başarısız: ' + error.message);
+                console.error('Giriş başarısız: ' + error.message);
             } else {
-                alert('Giriş başarısız: Bilinmeyen bir hata oluştu.');
+                console.error('Giriş başarısız: Bilinmeyen bir hata oluştu.');
             }
         }
     };
@@ -32,14 +30,14 @@ const AuthPage: React.FC<AuthPageProps> = ({ onAuthChange }) => {
     const handleRegister = async () => {
         try {
             await register(email, password);
-            alert('Hesabınız başarıyla oluşturuldu!');
+            console.log('Hesabınız başarıyla oluşturuldu!');
             onAuthChange(); // Başarılı kayıt sonrası parent bileşeni bilgilendir
             navigate('/');
         } catch (error: unknown) {
             if (error instanceof Error) {
-                alert('Kayıt başarısız: ' + error.message);
+                console.error('Kayıt başarısız: ' + error.message);
             } else {
-                alert('Kayıt başarısız: Bilinmeyen bir hata oluştu.');
+                console.error('Kayıt başarısız: Bilinmeyen bir hata oluştu.');
             }
         }
     };

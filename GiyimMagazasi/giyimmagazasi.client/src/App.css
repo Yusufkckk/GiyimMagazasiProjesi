@@ -1,9 +1,15 @@
-﻿/* Genel Sayfa Ayarları ve Font */
-* {
-    box-sizing: border-box; /* En önemli düzeltme: Elemanların genişliğine padding ve border dahil edilir. */
+﻿/* GENEL SIFIRLAMA VE FONT TANIMLAMALARI */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body, html, #root {
+body,
+html,
+#root {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -12,28 +18,31 @@ body, html, #root {
     background-color: #f8f8f8;
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden; /* Sağdaki kaydırma çubuğunu gizler */
 }
 
-/* Ana İçerik Kapsayıcısı */
+/* ANA DÜZEN KAPSAYICILARI */
+
+/* Tüm uygulama içeriğini kapsar ve dikey düzende hizalar. */
 .main-content {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* Ortalanmış İçerik Kapsayıcısı */
+/* Sayfa içeriğini ortalar ve maksimum genişlik sınırı koyar. */
 .container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
-    width: 100%;
+    width: 110%;
 }
+
 
 /* Header */
 .header {
     background-color: #222;
     color: #fff;
-    padding: 10px 15px; /* Başlık dolgusunu küçültüldü */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,29 +53,52 @@ body, html, #root {
     z-index: 1000;
 }
 
-    .header h1 {
-        margin: 0;
-        font-size: 1.6em; /* Font boyutunu biraz küçültüldü */
-        font-weight: 700;
-        letter-spacing: 1px;
+/* Sol, Orta ve Sağ bölümleri tanımlayalım */
+.header-left, .header-center, .header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-left {
+    flex-grow: 1; /* Sol bölüm genişleyebilir */
+}
+
+.header-center {
+    flex-grow: 1; /* Orta bölüm de genişleyebilir */
+    justify-content: center; /* İçindeki h1 etiketini ortalar */
+}
+
+.header-right {
+    flex-grow: 1; /* Sağ bölüm de genişleyebilir */
+    justify-content: flex-end; /* İçindeki nav etiketini sağa yaslar */
+    gap: 15px;
+}
+
+.header-center h1 {
+    margin: 0;
+    font-size: 1.6em;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.header a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 10px; /* Tıklama alanını genişlettik */
+}
+
+    .header a:hover {
+        color: #00bcd4;
     }
 
-    .header nav {
-        display: flex;
-        align-items: center;
-        gap: 15px; /* Navigasyon elemanları arasındaki boşluk */
-    }
-
-        .header nav a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-            .header nav a:hover {
-                color: #00bcd4;
-            }
+/* Navigasyon Elemanları için Ortak Stil */
+.header nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
 
 /* Auth Butonları */
 .auth-buttons {
@@ -83,7 +115,7 @@ body, html, #root {
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     text-decoration: none;
     white-space: nowrap;
 }
@@ -94,6 +126,23 @@ body, html, #root {
 
     .login-button:hover, .logout-button:hover {
         transform: translateY(-2px);
+    }
+
+.login-button:hover {
+    background-color: #0097a7; /* Hover rengi ekledik */
+}
+
+.logout-button:hover {
+    background-color: #c62828; /* Hover rengi ekledik */
+}
+
+    .login-button:hover, .logout-button:hover {
+        background-color: #0097a7; /* Hover rengi ekledik */
+        transform: translateY(-2px);
+    }
+
+    .logout-button:hover {
+        background-color: #c62828; /* Hover rengi ekledik */
     }
 
 /* Ürün Filtreleme/Sıralama Bölümü */

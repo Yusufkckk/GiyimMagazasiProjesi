@@ -174,3 +174,4 @@ C:\Users\yusuf\source\repos\GiyimMagazasiProjesi\GiyimMagazasi\GiyimMagazasi.Ser
 C:\Users\yusuf\source\repos\GiyimMagazasiProjesi\GiyimMagazasi\GiyimMagazasi.Server\obj\Debug\net8.0\GiyimMagazasi.Server.pdb
 C:\Users\yusuf\source\repos\GiyimMagazasiProjesi\GiyimMagazasi\GiyimMagazasi.Server\obj\Debug\net8.0\GiyimMagazasi.Server.genruntimeconfig.cache
 C:\Users\yusuf\source\repos\GiyimMagazasiProjesi\GiyimMagazasi\GiyimMagazasi.Server\obj\Debug\net8.0\ref\GiyimMagazasi.Server.dll
+C:\Users\yusuf\source\repos\GiyimMagazasiProjesi\GiyimMagazasi\GiyimMagazasi.Server\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
