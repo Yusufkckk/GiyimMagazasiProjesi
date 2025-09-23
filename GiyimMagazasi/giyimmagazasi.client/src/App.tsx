@@ -9,6 +9,7 @@ import Cart from './Cart';
 import { useCart } from './useCart';
 import { logout, isAuthenticated, getUserInfo } from './services/authService';
 import AuthPage from './pages/AuthPage';
+import AdminPage from './AdminPage';
 
 
 
@@ -131,6 +132,7 @@ const AppContent = () => {
                     <nav>
                         <Link to="/">Anasayfa</Link>
                         <Link to="/cart">Sepetim ({itemCount})</Link>
+                        {isLoggedIn && <Link to="/admin">Yönetim Paneli</Link>} {/* Sadece giriş yapıldığında göster */}
                         {isLoggedIn ? (
                             <button onClick={handleSignOut} className="logout-button">{userName} - Çıkış Yap</button>
                         ) : (
@@ -144,6 +146,7 @@ const AppContent = () => {
                         <Route path="/products/:id" element={<ProductDetail />} />
                         <Route path="/cart" element={<Cart />} />
                         <Route path="/auth" element={<AuthPage onAuthChange={() => { setIsLoggedIn(isAuthenticated()); }} />} />
+                        {isLoggedIn && <Route path="/admin" element={<AdminPage />} />} {/* Sadece giriş yapıldığında erişilebilir */}
                     </Routes>
                 </div>
             </div>
