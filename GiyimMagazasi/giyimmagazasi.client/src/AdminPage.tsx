@@ -26,9 +26,21 @@ const AdminPage: React.FC = () => {
         fetchProducts();
     }, []);
 
+    // API istekleri için yetkilendirme başlığını al
+    const getAuthHeaders = () => {
+        const token = localStorage.getItem('user_token'); // Buradaki anahtar "user_token" olmalı
+        return {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        };
+    };
+
+    // Ürünleri API'den çekme
     const fetchProducts = async () => {
         try {
-            const response = await fetch('/api/products');
+            const response = await fetch('/api/products', {
+                headers: getAuthHeaders(), // Yetkilendirme başlığını ekledik
+            });
             if (!response.ok) throw new Error('API hatası!');
             const data = await response.json();
             setProducts(data);
@@ -60,7 +72,7 @@ const AdminPage: React.FC = () => {
         try {
             const response = await fetch(url, {
                 method: method,
-                headers: { 'Content-Type': 'application/json' },
+                headers: getAuthHeaders(), // Yetkilendirme başlığını ekle
                 body: JSON.stringify(productToSubmit),
             });
 
@@ -90,6 +102,7 @@ const AdminPage: React.FC = () => {
             try {
                 const response = await fetch(`/api/products/${id}`, {
                     method: 'DELETE',
+                    headers: getAuthHeaders(), // Yetkilendirme başlığını ekle
                 });
                 if (!response.ok) throw new Error('Silme işlemi başarısız oldu!');
                 fetchProducts();

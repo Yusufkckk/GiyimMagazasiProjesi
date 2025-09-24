@@ -166,12 +166,16 @@ html,
         cursor: pointer;
     }
 
-/* Ürün Listesi ve Link Stilleri */
+
+
+/* ÜRÜN LİSTESİ VE KARTLARI */
 .product-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     padding: 20px 0;
+    justify-content: center;
+    align-items: stretch;
 }
 
     .product-list a {
@@ -179,66 +183,139 @@ html,
         color: inherit;
     }
 
-/* Ürün Kartı (ProductCard) */
+/* Kart */
 .product-card {
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     overflow: hidden;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
     .product-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     }
 
-.product-card-image {
+/* Görsel */
+.product-image {
     width: 100%;
-    height: 180px;
+    height: 170px;
     object-fit: cover;
-    border-bottom: 1px solid #eee;
+    display: block;
 }
 
-.product-card-content {
-    padding: 15px;
+/* Detaylar */
+.product-details {
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* Beyaz alanı biraz daha yüksek yapalım */
+    min-height: 130px; /* Burayı ihtiyacına göre artırabilirsin */
 }
 
-.product-card-name {
-    font-size: 1.2em;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: #222;
-}
-
-.product-card-details {
-    font-size: 0.8em;
-    color: #666;
-    margin-bottom: 12px;
-}
-
-.product-card-price {
-    font-size: 1.4em;
-    font-weight: 700;
-    color: #00bcd4;
-    margin-bottom: 15px;
-}
-
-/* Sepet Kapsayıcısı */
-.cart-container {
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    margin-top: 40px;
-}
-
-    .cart-container h2 {
-        text-align: center;
-        margin-bottom: 30px;
-        color: #222;
-        font-size: 2em;
+    .product-details .product-name {
+        font-size: 1.2em;
+        font-weight: 600;
+        color: #000;
+        margin-bottom: 6px;
+        line-height: 1.2;
     }
+
+    .product-details .product-description {
+        font-size: 0.85em;
+        color: #555;
+        margin-bottom: 10px;
+        flex-grow: 1;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* 2 satırda kes */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+/* Fiyat */
+.product-price {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #fff;
+    background-color: #00bcd4;
+    border-radius: 6px;
+    padding: 8px 12px;
+    text-align: center;
+    align-self: flex-start;
+    margin-top: auto;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+/* Responsive Düzenlemeler (Eğer zaten varsa, bu kısımları kontrol et) */
+@media (max-width: 768px) {
+    .product-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-list {
+        grid-template-columns: 1fr; /* Tek sütun */
+        gap: 15px;
+        padding: 15px 0;
+    }
+
+    .product-image-container {
+        height: 200px;
+    }
+
+    .product-details {
+        padding: 12px;
+    }
+
+        .product-details .product-name {
+            font-size: 1.1em;
+        }
+
+        .product-details .product-price {
+            font-size: 1.2em;
+        }
+}
+
+/* Responsive Düzenlemeler (Eğer zaten varsa, bu kısımları kontrol et) */
+@media (max-width: 768px) {
+    .product-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-list {
+        grid-template-columns: 1fr; /* Tek sütun */
+        gap: 15px;
+        padding: 15px 0;
+    }
+
+    .product-image-container {
+        height: 200px;
+    }
+
+    .product-details {
+        padding: 12px;
+    }
+
+        .product-details .product-name {
+            font-size: 1.1em;
+        }
+
+        .product-details .product-price {
+            font-size: 1.2em;
+        }
+}
 
 /* Sepet Öğeleri Listesi */
 .cart-list {

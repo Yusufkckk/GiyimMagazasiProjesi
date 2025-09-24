@@ -2,6 +2,16 @@
 
 const API_BASE_URL = 'https://localhost:61963/api/auth'; // Kendi API adresinle değiştir.
 
+const handleResponse = async (response: Response) => {
+    try {
+        const data = await response.json();
+        return data;
+    } catch {
+        const text = await response.text();
+        return { message: text || 'Bilinmeyen bir hata oluştu.' };
+    }
+};
+
 export const login = async (email: string, password: string): Promise<string> => {
     try {
         const response = await fetch(`${API_BASE_URL}/login`, {
@@ -12,15 +22,14 @@ export const login = async (email: string, password: string): Promise<string> =>
             body: JSON.stringify({ email, password }),
         });
 
+        const data = await handleResponse(response);
+
         if (!response.ok) {
-            const errorData = await response.json();
-            throw new Error(errorData.message || 'Giriş başarısız.');
+            throw new Error(data.message || 'Giriş başarısız.');
         }
 
-        const data = await response.json();
-        const token = data.token; // Backend'in döndürdüğü token'ı al
-
-        localStorage.setItem('user_token', token);
+        const token = data.token;
+        localStorage.setItem('user_token', token); // Doğru anahtar: "user_token"
         return token;
     } catch (error) {
         if (error instanceof Error) {
@@ -40,12 +49,12 @@ export const register = async (email: string, password: string): Promise<boolean
             body: JSON.stringify({ email, password }),
         });
 
+        const data = await handleResponse(response);
+
         if (!response.ok) {
-            const errorData = await response.json();
-            throw new Error(errorData.message || 'Kayıt başarısız.');
+            throw new Error(data.message || 'Kayıt başarısız.');
         }
 
-        // Başarılı kayıt sonrası otomatik giriş yap
         await login(email, password);
         return true;
     } catch (error) {
