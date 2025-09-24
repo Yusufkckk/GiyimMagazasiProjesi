@@ -213,9 +213,9 @@ html,
     padding: 14px;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    flex-grow: 3;
     /* Beyaz alanı biraz daha yüksek yapalım */
-    min-height: 130px; /* Burayı ihtiyacına göre artırabilirsin */
+    min-height: 180px; /* Burayı ihtiyacına göre artırabilirsin */
 }
 
     .product-details .product-name {
@@ -242,7 +242,7 @@ html,
 .product-price {
     font-size: 1.2em;
     font-weight: 700;
-    color: #fff;
+    color: #0d0da3;
     background-color: #00bcd4;
     border-radius: 6px;
     padding: 8px 12px;
