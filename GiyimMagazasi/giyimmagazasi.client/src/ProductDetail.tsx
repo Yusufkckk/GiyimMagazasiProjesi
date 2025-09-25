@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+﻿import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import type { Product } from './types/Product';
 import { useCart } from './useCart';
@@ -13,7 +13,7 @@ const ProductDetail = () => {
         fetch(`/api/products/${id}`)
             .then((response) => {
                 if (!response.ok) {
-                    throw new Error(`HTTP hatas�! Durum kodu: ${response.status}`);
+                    throw new Error(`HTTP hatası! Durum kodu: ${response.status}`);
                 }
                 return response.json();
             })
@@ -22,20 +22,27 @@ const ProductDetail = () => {
                 setLoading(false);
             })
             .catch(() => {
-                console.error('Veri �ekme s�ras�nda bir hata olu�tu');
+                console.error('Veri çekme sırasında bir hata oluştu');
                 setLoading(false);
             });
     }, [id]);
 
     if (loading) {
-        return <div>Y�kleniyor...</div>;
+        return <div>Yükleniyor...</div>;
     }
 
     if (!product) {
-        return <div>�r�n bulunamad�.</div>;
+        return <div>Ürün bulunamadı.</div>;
     }
+    // 👇️ YENİ: Stok kontrolü
+    const hasStock = product.stock > 0;
 
     const handleAddToCart = () => {
+        if (!hasStock) {
+            alert(`${product.name} stokta kalmadı. Sepete eklenemiyor.`);
+            return;
+        }
+
         addToCart(product, 1);
         alert(`${product.name} sepete eklendi!`);
     };
@@ -53,14 +60,21 @@ const ProductDetail = () => {
                 <h1 className="product-detail-name">{product.name}</h1>
                 <p className="product-detail-description">{product.description}</p>
                 <p className="product-detail-price">Fiyat: ${product.price.toFixed(2)}</p>
-                <p className="product-detail-stock">Stok: {product.stock}</p>
+
+                {/* 👇️ YENİ: Stok bilgisini renklendir */}
+                <p className="product-detail-stock" style={{ color: hasStock ? 'green' : 'red', fontWeight: 'bold' }}>
+                    Stok: {hasStock ? product.stock : 'TÜKENDİ'}
+                </p>
+
                 <p className="product-detail-category">Kategori: {product.category}</p>
 
                 <button
-                    className="add-to-cart-button"
+                    // 👇️ YENİ: Stok yoksa disabled ve farklı class
+                    className={`add-to-cart-button ${!hasStock ? 'disabled' : ''}`}
                     onClick={handleAddToCart}
+                    disabled={!hasStock}
                 >
-                    Sepete Ekle
+                    {hasStock ? 'Sepete Ekle' : 'Stok Tükendi'}
                 </button>
             </div>
         </div>

@@ -41,66 +41,169 @@ html,
 
 /* Header */
 .header {
-    background-color: #222;
-    color: #fff;
+    background-color: #fff; /* SİYAHTAN BEYAZA ÇEVRİLDİ */
+    color: #333; /* Metin rengi koyu yapıldı */
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* max-width: 1200px; */ /* Max genişliği kaldırdık, içeriği ortalamak için header-container kullanacağız */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Hafif gölge */
     position: sticky;
     top: 0;
     z-index: 1000;
+    padding: 15px 20px; /* Kenar boşlukları eklendi */
 }
 
-/* Sol, Orta ve Sağ bölümleri tanımlayalım */
-.header-left, .header-center, .header-right {
-    display: flex;
-    align-items: center;
-}
-
-.header-left {
-    flex-grow: 1; /* Sol bölüm genişleyebilir */
-}
-
-.header-center {
-    flex-grow: 1; /* Orta bölüm de genişleyebilir */
-    justify-content: center; /* İçindeki h1 etiketini ortalar */
-}
-
-.header-right {
-    flex-grow: 1; /* Sağ bölüm de genişleyebilir */
-    justify-content: flex-end; /* İçindeki nav etiketini sağa yaslar */
-    gap: 15px;
-}
-
-.header-center h1 {
+/* Kocak Fashion yazısı (Logo) */
+.header-logo h1 {
     margin: 0;
-    font-size: 1.6em;
+    font-size: 1.8em;
     font-weight: 700;
     letter-spacing: 1px;
 }
 
-.header a {
-    color: #fff;
+.header-logo a {
+    color: #333; /* Siyah/Koyu Gri */
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-    padding: 10px; /* Tıklama alanını genişlettik */
+    padding: 0;
 }
 
-    .header a:hover {
+
+/* Orta Navigasyon Stili */
+.header-nav-center ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav-center li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.header-nav-center a {
+    color: #555; /* Daha yumuşak gri */
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 10px 0; /* Vertical padding'i sıfırladık */
+}
+
+    .header-nav-center a:hover {
         color: #00bcd4;
     }
 
-/* Navigasyon Elemanları için Ortak Stil */
-.header nav {
+/* Dropdown Menü Stili (Yeni eklenenler) */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+    border-radius: 8px;
+    padding: 10px 0;
+    top: 30px; /* Linkin altına hizala */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #555;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+    .dropdown-content a:hover {
+        background-color: #f0f0f0;
+    }
+
+/* Sağdaki İkonlar ve Butonlar */
+.header-actions {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 15px; /* İkonlar ve butonlar arası boşluk */
+}
+
+    .header-actions .icon {
+        font-size: 1.2em;
+        color: #555;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+        .header-actions .icon:hover {
+            color: #00bcd4;
+        }
+
+/* Auth Butonları */
+/* Bu kısımlar mevcut App.css'inizde var, sadece renklerini kontrol edin: */
+.login-button {
+    background-color: #00bcd4; /* Mavi/Turkuaz */
+    color: white;
+}
+
+.logout-button {
+    background-color: #e53935; /* Kırmızı */
+}
+
+
+/* Mobil Uyum (Mevcut App.css'indeki 768px'i güncelleyelim) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .header-nav-center {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+        .header-nav-center ul {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header-nav-center li {
+            margin: 5px 0;
+        }
+
+    .header-actions {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: space-around;
+    }
 }
 
 /* Auth Butonları */
+/* Yönetim Paneli linkinin, Anasayfa/Giyim linkleri gibi görünmesi için */
+.admin-button {
+    /* Eski buton görünümlerini nötralize ediyoruz */
+    background-color: transparent;
+    color: #555; /* Normal link rengi */
+    padding: 0;
+    border: none;
+    font-weight: 500;
+    /* Gerekli transition kalabilir */
+    transition: color 0.3s ease;
+}
+
+    .admin-button:hover {
+        color: #00bcd4;
+        transform: none;
+    }
 .auth-buttons {
     display: flex;
     align-items: center;
