@@ -92,7 +92,7 @@ const AdminPage: React.FC = () => {
     };
 
     // Ürünü silme
-    const handleDelete = async (id: number) => { // 👈️ Hata çözüldü: Artık tanımlı
+    const handleDelete = async (id: number) => {
         if (window.confirm('Bu ürünü silmek istediğinizden emin misiniz?')) {
             try {
                 const response = await fetch(`/api/products/${id}`, {
@@ -100,9 +100,15 @@ const AdminPage: React.FC = () => {
                     headers: getAuthHeaders(),
                 });
                 if (!response.ok) throw new Error('Silme işlemi başarısız oldu!');
-                fetchProducts();
+
+                
+                alert('✅ Ürün başarıyla silindi!');
+
+                fetchProducts(); // Listeyi yeniden çek (veya setProducts ile güncelleyebiliriz)
             } catch (error) {
                 console.error('Ürünü silerken bir hata oluştu:', error);
+                
+                alert('❌ Ürünü silerken bir hata oluştu. Yetkilerinizi kontrol edin.');
             }
         }
     };
@@ -139,10 +145,18 @@ const AdminPage: React.FC = () => {
             });
 
             if (!response.ok) throw new Error('İşlem başarısız oldu!');
+
+            // 🟢 BAŞARI BİLDİRİMİ EKLE
+            const successMessage = isEditing ? '✅ Ürün başarıyla güncellendi!' : '✅ Yeni ürün başarıyla eklendi!';
+            alert(successMessage);
+
             fetchProducts();
             resetForm();
+
         } catch (error) {
             console.error('Ürün işlemi sırasında bir hata oluştu:', error);
+            // 🔴 HATA BİLDİRİMİ
+            alert('❌ Ürün işlemi sırasında bir hata oluştu. Yetkilerinizi kontrol edin.');
         }
     };
 
@@ -210,7 +224,7 @@ const AdminPage: React.FC = () => {
                             <img src={product.imageUrl} alt={product.name} />
                             <div className="admin-product-info">
                                 <h4>{product.name}</h4>
-                                <p>${product.price.toFixed(2)}</p>
+                                <p>₺{product.price.toFixed(2)}</p>
                                 <p>Stok: {product.stock}</p>
                                 <p>Kategori: {product.category}</p>
                             </div>

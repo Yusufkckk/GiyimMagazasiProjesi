@@ -47,7 +47,7 @@ const Cart = () => {
                         />
                         <div className="cart-item-details">
                             <p className="cart-item-name">{item.product.name}</p>
-                            <p className="cart-item-price">Fiyat: ${item.product.price.toFixed(2)}</p>
+                            <p className="cart-item-price">Fiyat: ₺{item.product.price.toFixed(2)}</p>
                         </div>
                         <div className="quantity-controls">
                             <button
@@ -60,7 +60,7 @@ const Cart = () => {
                             <span className="cart-item-quantity">{item.quantity}</span>
                             <button onClick={() => updateQuantity(item.product.id, item.quantity + 1)}>+</button>
                         </div>
-                        <p className="cart-item-subtotal">Ara Toplam: ${(item.product.price * item.quantity).toFixed(2)}</p>
+                        <p className="cart-item-subtotal">Ara Toplam: ₺{(item.product.price * item.quantity).toFixed(2)}</p>
                         <button
                             onClick={() => removeFromCart(item.product.id)}
                             className="remove-button"
@@ -73,7 +73,7 @@ const Cart = () => {
 
             {/* Sepet toplamını ve butonları gösteren bölüm */}
             <div className="cart-summary" style={{ textAlign: 'right', marginTop: '30px' }}>
-                <h3 style={{ marginBottom: '15px' }}>Toplam Tutar: ${cartTotal.toFixed(2)}</h3>
+                <h3 style={{ marginBottom: '15px' }}>Toplam Tutar: ₺{cartTotal.toFixed(2)}</h3>
 
                 {/* 🚀 ÖDEME BUTONU */}
                 <button

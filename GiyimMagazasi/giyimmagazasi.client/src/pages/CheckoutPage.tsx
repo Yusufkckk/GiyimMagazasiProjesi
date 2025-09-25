@@ -3,7 +3,7 @@ import { useCart } from '../useCart';
 import { useNavigate } from 'react-router-dom';
 import type { Product } from '../types/Product';
 
-// Sepet öğesi tipini tanımlıyoruz (TS7006 hatasını çözmek için)
+
 interface CartItem {
     product: Product;
     quantity: number;
@@ -48,7 +48,7 @@ const CheckoutPage: React.FC = () => {
             setIsProcessing(false);
 
             // cartTotal kullanıldı
-            alert(`Siparişiniz başarıyla alındı! Toplam Tutar: $${cartTotal.toFixed(2)}`);
+            alert(`Siparişiniz başarıyla alındı! Toplam Tutar: ₺${cartTotal.toFixed(2)}`);
             navigate('/');
 
         }, 2000);
@@ -65,14 +65,14 @@ const CheckoutPage: React.FC = () => {
                     {cart.map((item: CartItem) => (
                         <li key={item.product.id} style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
                             <span>{item.product.name} (x{item.quantity})</span>
-                            <span>${(item.product.price * item.quantity).toFixed(2)}</span>
+                            <span>₺{(item.product.price * item.quantity).toFixed(2)}</span>
                         </li>
                     ))}
                 </ul>
                 <hr />
                 <div style={{ display: 'flex', justifyContent: 'space-between', fontWeight: 'bold', fontSize: '1.2em' }}>
                     <span>Toplam Tutar:</span>
-                    <span>${cartTotal.toFixed(2)}</span>
+                    <span>₺{cartTotal.toFixed(2)}</span>
                 </div>
             </div>
 
@@ -128,7 +128,7 @@ const CheckoutPage: React.FC = () => {
                         opacity: isProcessing || cart.length === 0 ? 0.6 : 1
                     }}
                 >
-                    {isProcessing ? 'Sipariş İşleniyor...' : `Siparişi Tamamla (Toplam: $${cartTotal.toFixed(2)})`}
+                    {isProcessing ? 'Sipariş İşleniyor...' : `Siparişi Tamamla (Toplam: ₺${cartTotal.toFixed(2)})`}
                 </button>
             </form>
         </div>
