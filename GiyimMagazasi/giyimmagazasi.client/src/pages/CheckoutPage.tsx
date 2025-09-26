@@ -3,6 +3,9 @@ import { useCart } from '../useCart';
 import { useNavigate } from 'react-router-dom';
 import type { Product } from '../types/Product';
 
+// 🚀 DÜZELTME 1: API URL'si artık doğru Controller'a işaret ediyor.
+// Bu portun (61963) Back-End'inizde çalıştığından eminiz.
+const ORDER_API_ENDPOINT = 'https://localhost:61963/api/Orders';
 
 interface CartItem {
     product: Product;
@@ -10,24 +13,23 @@ interface CartItem {
 }
 
 const CheckoutPage: React.FC = () => {
-    // Sepet verilerini (cart ve cartTotal) kullanıyoruz
     const { cart, cartTotal, clearCart } = useCart();
     const navigate = useNavigate();
 
+    // 🛑 HATA ÇÖZÜMÜ A: formData'nın başlangıç değerlerini tam tanımladık
     const [formData, setFormData] = useState({
         name: '',
+        email: '',
         address: '',
         city: '',
-        email: '',
     });
-
     const [isProcessing, setIsProcessing] = useState(false);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
         if (cart.length === 0) {
@@ -37,22 +39,52 @@ const CheckoutPage: React.FC = () => {
 
         setIsProcessing(true);
 
-        setTimeout(() => {
-            console.log('Sipariş Tamamlandı:', {
-                ...formData,
-                items: cart,
-                total: cartTotal
+        const orderItems = cart.map(item => ({
+            ProductId: item.product.id,
+            Quantity: item.quantity
+        }));
+
+        const orderPayload = {
+            CustomerName: formData.name,
+            CustomerAddress: formData.address,
+            CustomerCity: formData.city,
+            CustomerEmail: formData.email,
+            TotalAmount: cartTotal,
+            OrderItems: orderItems
+        };
+
+        try {
+            const response = await fetch(ORDER_API_ENDPOINT, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(orderPayload),
             });
 
-            clearCart();
-            setIsProcessing(false);
+            const responseData = await response.json();
 
-            // cartTotal kullanıldı
+            if (!response.ok) {
+                throw new Error(responseData.message || 'Bilinmeyen bir sipariş hatası oluştu.');
+            }
+
+            clearCart();
             alert(`Siparişiniz başarıyla alındı! Toplam Tutar: ₺${cartTotal.toFixed(2)}`);
             navigate('/');
 
-        }, 2000);
-    };
+        } catch (error: unknown) {
+            // Hata mesajını daha güvenli alıyoruz
+            let message = 'Sunucuya bağlanılamadı.';
+            if (error instanceof Error) {
+                message = error.message;
+            }
+
+            // Hata mesajını kullanıcıya göster
+            alert(`Sipariş Hatası: ${message}`);
+        } finally {
+            setIsProcessing(false);
+        }
+     };
 
     return (
         <div className="container" style={{ maxWidth: '600px', margin: '50px auto' }}>
@@ -134,5 +166,5 @@ const CheckoutPage: React.FC = () => {
         </div>
     );
 };
-
+    
 export default CheckoutPage;

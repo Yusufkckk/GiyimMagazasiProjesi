@@ -139,3 +139,31 @@
     .delete-button:hover {
         background-color: #d32f2f;
     }
+.admin-content-wrapper {
+    display: flex; /* İçindeki öğeleri yan yana hizalamayı etkinleştir */
+    gap: 30px; /* Sütunlar arasına boşluk bırak */
+    align-items: flex-start; /* İçerik boyları farklı olsa bile üstten hizala */
+    margin-top: 20px;
+}
+
+.admin-form {
+    flex: 0 0 350px; /* Formun sabit 350px genişliğinde olmasını sağlar */
+    /* ... (Diğer form stilleri) ... */
+}
+
+.admin-product-list {
+    flex: 1; /* Ürün listesi kalan tüm alanı kaplayacak */
+}
+
+/* Küçük ekranlar için düzeni bozma (Responsive) */
+@media (max-width: 900px) {
+    .admin-content-wrapper {
+        flex-direction: column; /* 900px'in altında dikey düzene geri dön */
+        gap: 40px;
+    }
+
+    .admin-form {
+        flex: auto; /* Dikey düzende tam genişlik kullan */
+        width: 100%;
+    }
+}

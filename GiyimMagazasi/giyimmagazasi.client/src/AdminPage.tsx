@@ -182,59 +182,65 @@ const AdminPage: React.FC = () => {
         <div className="admin-container">
             <h2>Ürün Yönetimi</h2>
 
-            <form onSubmit={handleSubmit} className="admin-form">
-                <h3>{isEditing ? 'Ürünü Düzenle' : 'Yeni Ürün Ekle'}</h3>
+            <div className="admin-content-wrapper">
 
-                {/* Mevcut Inputlar */}
-                <input type="text" name="name" value={newProduct.name} onChange={handleInputChange} placeholder="Ürün Adı" required />
-                <input type="number" name="price" value={newProduct.price} onChange={handleInputChange} placeholder="Fiyat" step="0.01" required />
-                <textarea name="description" value={newProduct.description} onChange={handleInputChange} placeholder="Açıklama" rows={4} required></textarea>
-                <input type="text" name="imageUrl" value={newProduct.imageUrl} onChange={handleInputChange} placeholder="Görsel URL'si" required />
+                {/* SOL SÜTUN: Form */}
+                <form onSubmit={handleSubmit} className="admin-form">
+                    <h3>{isEditing ? 'Ürünü Düzenle' : 'Yeni Ürün Ekle'}</h3>
 
-                {/* Kategori Seçimi */}
-                <select name="category" value={newProduct.category} onChange={handleInputChange} required>
-                    <option value="" disabled>Kategori Seçiniz</option>
-                    {ALL_CATEGORIES.map(cat => (
-                        <option key={cat} value={cat}>
-                            {/* Kategorinin ilk harfini büyük yapıyoruz */}
-                            {cat.charAt(0).toUpperCase() + cat.slice(1)}
-                        </option>
-                    ))}
-                </select>
+                    {/* Mevcut Inputlar */}
+                    <input type="text" name="name" value={newProduct.name} onChange={handleInputChange} placeholder="Ürün Adı" required />
+                    <input type="number" name="price" value={newProduct.price} onChange={handleInputChange} placeholder="Fiyat" step="0.01" required />
+                    <textarea name="description" value={newProduct.description} onChange={handleInputChange} placeholder="Açıklama" rows={4} required></textarea>
+                    <input type="text" name="imageUrl" value={newProduct.imageUrl} onChange={handleInputChange} placeholder="Görsel URL'si" required />
 
-                {/* Stok Miktarı */}
-                <input type="number" name="stock" value={newProduct.stock} onChange={handleInputChange} placeholder="Stok Miktarı" required />
+                    {/* Kategori Seçimi */}
+                    <select name="category" value={newProduct.category} onChange={handleInputChange} required>
+                        <option value="" disabled>Kategori Seçiniz</option>
+                        {ALL_CATEGORIES.map(cat => (
+                            <option key={cat} value={cat}>
+                                {/* Kategorinin ilk harfini büyük yapıyoruz */}
+                                {cat.charAt(0).toUpperCase() + cat.slice(1)}
+                            </option>
+                        ))}
+                    </select>
 
-                {/* Butonlar */}
-                <button type="submit">{isEditing ? 'Ürünü Güncelle' : 'Ürünü Ekle'}</button>
-                {isEditing && (
-                    <button type="button" onClick={resetForm} className="cancel-button">
-                        İptal
-                    </button>
-                )}
-            </form>
+                    {/* Stok Miktarı */}
+                    <input type="number" name="stock" value={newProduct.stock} onChange={handleInputChange} placeholder="Stok Miktarı" required />
 
-            <div className="admin-product-list">
-                <h3>Mevcut Ürünler</h3>
-                {products.length === 0 ? (
-                    <p>Henüz ürün bulunmuyor.</p>
-                ) : (
-                    products.map((product) => (
-                        <div key={product.id} className="admin-product-item">
-                            <img src={product.imageUrl} alt={product.name} />
-                            <div className="admin-product-info">
-                                <h4>{product.name}</h4>
-                                <p>₺{product.price.toFixed(2)}</p>
-                                <p>Stok: {product.stock}</p>
-                                <p>Kategori: {product.category}</p>
+                    {/* Butonlar */}
+                    <button type="submit">{isEditing ? 'Ürünü Güncelle' : 'Ürünü Ekle'}</button>
+                    {isEditing && (
+                        <button type="button" onClick={resetForm} className="cancel-button">
+                            İptal
+                        </button>
+                    )}
+                </form>
+
+                {/* SAĞ SÜTUN: Mevcut Ürünler Listesi */}
+                <div className="admin-product-list">
+                    <h3>Mevcut Ürünler</h3>
+                    {products.length === 0 ? (
+                        <p>Henüz ürün bulunmuyor.</p>
+                    ) : (
+                        products.map((product) => (
+                            <div key={product.id} className="admin-product-item">
+                                <img src={product.imageUrl} alt={product.name} />
+                                <div className="admin-product-info">
+                                    <h4>{product.name}</h4>
+                                    <p>₺{product.price.toFixed(2)}</p>
+                                    <p>Stok: {product.stock}</p>
+                                    <p>Kategori: {product.category}</p>
+                                </div>
+                                <div className="admin-buttons">
+                                    <button onClick={() => handleEdit(product)} className="edit-button">Düzenle</button>
+                                    <button onClick={() => handleDelete(product.id)} className="delete-button">Sil</button>
+                                </div>
                             </div>
-                            <div className="admin-buttons">
-                                <button onClick={() => handleEdit(product)} className="edit-button">Düzenle</button>
-                                <button onClick={() => handleDelete(product.id)} className="delete-button">Sil</button>
-                            </div>
-                        </div>
-                    ))
-                )}
+                        ))
+                    )}
+                </div>
+
             </div>
         </div>
     );
