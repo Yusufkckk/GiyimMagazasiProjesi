@@ -13,6 +13,7 @@ import type { UserInfo } from './services/authService';
 import AuthPage from './pages/AuthPage';
 import AdminPage from './AdminPage';
 import { FaSearch, FaShoppingBag } from 'react-icons/fa';
+import OrderHistoryPage from './pages/OrderHistoryPage';
 
 
 // Ana sayfa içeriğini doğrudan App.tsx'in içinde tanımlıyoruz
@@ -34,8 +35,7 @@ function HomePageContent() {
             })
             .then((data: Product[]) => {
 
-                // 👇️ HATA KAYNAĞI OLAN TEST KODU TAMAMEN KALDIRILDI!
-                // Artık API'den gelen gerçek kategori verisi kullanılacak.
+                
                 setProducts(data);
                 setLoading(false);
             })
@@ -192,6 +192,9 @@ const AppContent = () => {
                         <Link to="/search" className="icon"><FaSearch /></Link>
                         {/* Sepet öğe sayısını gösteren ikon */}
                         <Link to="/cart" className="icon"><FaShoppingBag /> ({itemCount})</Link>
+                        {isLoggedIn && userRole === 'admin' && (
+                            <Link to="/order-history" className="order-history-button">Sipariş Geçmişi</Link>
+                        )}
 
                         {userRole === 'admin' && <Link to="/admin" className="admin-button">Yönetim Paneli</Link>}
                         {isLoggedIn ? (
@@ -211,6 +214,7 @@ const AppContent = () => {
                         <Route path="/checkout" element={<CheckoutPage />} />
                         <Route path="/auth" element={<AuthPage onAuthChange={handleAuthChange} />} />
                         {userRole === 'admin' && <Route path="/admin" element={<AdminPage />} />}
+                        <Route path="/order-history" element={<OrderHistoryPage />} />
                     </Routes>
                 </div>
             </div>

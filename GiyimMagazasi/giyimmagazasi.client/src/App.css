@@ -189,7 +189,8 @@ html,
 
 /* Auth Butonları */
 /* Yönetim Paneli linkinin, Anasayfa/Giyim linkleri gibi görünmesi için */
-.admin-button {
+.admin-button,
+.order-history-button {
     /* Eski buton görünümlerini nötralize ediyoruz */
     background-color: transparent;
     color: #555; /* Normal link rengi */
@@ -200,7 +201,8 @@ html,
     transition: color 0.3s ease;
 }
 
-    .admin-button:hover {
+    .admin-button:hover,
+    .order-history-button:hover {
         color: #00bcd4;
         transform: none;
     }

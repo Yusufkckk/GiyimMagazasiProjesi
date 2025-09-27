@@ -3,8 +3,6 @@ import { useCart } from '../useCart';
 import { useNavigate } from 'react-router-dom';
 import type { Product } from '../types/Product';
 
-// 🚀 DÜZELTME 1: API URL'si artık doğru Controller'a işaret ediyor.
-// Bu portun (61963) Back-End'inizde çalıştığından eminiz.
 const ORDER_API_ENDPOINT = 'https://localhost:61963/api/Orders';
 
 interface CartItem {
@@ -13,10 +11,11 @@ interface CartItem {
 }
 
 const CheckoutPage: React.FC = () => {
+    // useCart hook'undan cartTotal değerini alıyoruz
     const { cart, cartTotal, clearCart } = useCart();
     const navigate = useNavigate();
 
-    // 🛑 HATA ÇÖZÜMÜ A: formData'nın başlangıç değerlerini tam tanımladık
+    // 🛑 Düzeltme: formData'dan TotalAmount kaldırıldı
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -44,12 +43,13 @@ const CheckoutPage: React.FC = () => {
             Quantity: item.quantity
         }));
 
+        // 🚀 DÜZELTME: TotalAmount, formData yerine doğrudan cartTotal'dan alınıyor
         const orderPayload = {
             CustomerName: formData.name,
             CustomerAddress: formData.address,
             CustomerCity: formData.city,
             CustomerEmail: formData.email,
-            TotalAmount: cartTotal,
+            TotalAmount: cartTotal, // ✅ Doğrudan useCart hook'undan gelen değer kullanılıyor
             OrderItems: orderItems
         };
 
@@ -65,7 +65,7 @@ const CheckoutPage: React.FC = () => {
             const responseData = await response.json();
 
             if (!response.ok) {
-                throw new Error(responseData.message || 'Bilinmeyen bir sipariş hatası oluştu.');
+                throw new Error(responseData.message || responseData || 'Bilinmeyen bir sipariş hatası oluştu.');
             }
 
             clearCart();
@@ -73,18 +73,17 @@ const CheckoutPage: React.FC = () => {
             navigate('/');
 
         } catch (error: unknown) {
-            // Hata mesajını daha güvenli alıyoruz
             let message = 'Sunucuya bağlanılamadı.';
             if (error instanceof Error) {
                 message = error.message;
             }
 
-            // Hata mesajını kullanıcıya göster
             alert(`Sipariş Hatası: ${message}`);
+            console.error('Sipariş verme hatası:', error);
         } finally {
             setIsProcessing(false);
         }
-     };
+    };
 
     return (
         <div className="container" style={{ maxWidth: '600px', margin: '50px auto' }}>
@@ -93,7 +92,6 @@ const CheckoutPage: React.FC = () => {
             <div style={{ padding: '20px', border: '1px solid #ddd', borderRadius: '5px', marginBottom: '20px' }}>
                 <h3>Sipariş Özeti</h3>
                 <ul style={{ listStyle: 'none', padding: 0 }}>
-                    {/* HATA ÇÖZÜMÜ 2: 'item' parametresine CartItem tipi eklendi */}
                     {cart.map((item: CartItem) => (
                         <li key={item.product.id} style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
                             <span>{item.product.name} (x{item.quantity})</span>
@@ -166,5 +164,5 @@ const CheckoutPage: React.FC = () => {
         </div>
     );
 };
-    
+
 export default CheckoutPage;

@@ -2,6 +2,8 @@
 using GiyimMagazasi.Server.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
+using System;
 using System.Threading.Tasks;
 
 namespace GiyimMagazasi.Server.Controllers
@@ -17,15 +19,32 @@ namespace GiyimMagazasi.Server.Controllers
             _context = context;
         }
 
-        // POST: api/Orders (Front-End'deki Siparişi Tamamla butonu buraya istek gönderecek)
+        // POST: api/Orders
         [HttpPost]
-        public async Task<IActionResult> CreateOrder([FromBody] Order order)
+        // ✅ DEĞİŞİKLİK: OrderDto'yu parametre olarak alıyoruz
+        public async Task<IActionResult> CreateOrder([FromBody] OrderDto orderDto)
         {
             // 1. Gelen siparişte ürün var mı kontrol et
-            if (order == null || !order.OrderItems.Any())
+            if (orderDto == null || orderDto.OrderItems == null || !orderDto.OrderItems.Any())
             {
                 return BadRequest("Sipariş öğesi bulunamadı.");
             }
+
+            // DTO'dan veritabanı modeline dönüşüm yapma
+            var order = new Order
+            {
+                CustomerName = orderDto.CustomerName,
+                CustomerAddress = orderDto.CustomerAddress,
+                CustomerCity = orderDto.CustomerCity,
+                CustomerEmail = orderDto.CustomerEmail,
+                TotalAmount = orderDto.TotalAmount,
+                OrderDate = DateTime.UtcNow,
+                OrderItems = orderDto.OrderItems.Select(itemDto => new OrderItemDto
+                {
+                    ProductId = itemDto.ProductId,
+                    Quantity = itemDto.Quantity
+                }).ToList()
+            };
 
             // Stok düşürme işlemi
             foreach (var item in order.OrderItems)
@@ -39,28 +58,22 @@ namespace GiyimMagazasi.Server.Controllers
 
                 if (product.Stock < item.Quantity)
                 {
-                    // Stok yetersizse 400 Bad Request dön
                     return BadRequest($"Ürün '{product.Name}' için yeterli stok yok. Mevcut: {product.Stock}");
                 }
 
-                // 2. Stoktan Düşür
                 product.Stock -= item.Quantity;
-                _context.Entry(product).State = EntityState.Modified;
             }
 
+            // Siparişi veritabanına kaydetme
             try
             {
-                // 3. Değişiklikleri veritabanına kaydet (Tüm stoklar tek Transaction'da güncellenir)
+                _context.Orders.Add(order);
                 await _context.SaveChangesAsync();
 
-                // 4. Sipariş kaydını oluşturma (Opsiyonel, şimdilik stok odaklıyız)
-                // Gerçek projede sipariş bilgileri (Order nesnesi) de veritabanına kaydedilmelidir.
-
-                return Ok(new { message = "Sipariş başarıyla oluşturuldu ve stoklar güncellendi." });
+                return Ok(new { message = "Sipariş başarıyla oluşturuldu ve stoklar güncellendi.", orderId = order.Id });
             }
             catch (DbUpdateConcurrencyException)
             {
-                // Concurrency hatası (aynı anda güncelleme)
                 return StatusCode(500, "Stok güncellenirken bir çakışma oluştu. Lütfen tekrar deneyin.");
             }
             catch (Exception ex)
@@ -68,5 +81,35 @@ namespace GiyimMagazasi.Server.Controllers
                 return StatusCode(500, $"Sunucu Hatası: {ex.Message}");
             }
         }
+
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Order>>> GetOrders()
+        {
+            try
+            {
+                // İlişkili verileri çekme
+                var orders = await _context.Orders
+                    .Include(o => o.OrderItems)
+                    .ThenInclude(oi => oi.Product) // Hatanın bu satırda olma olasılığı yüksek
+                    .OrderByDescending(o => o.OrderDate)
+                    .ToListAsync();
+
+                if (orders == null || !orders.Any())
+                {
+                    return NotFound("Henüz sipariş bulunmamaktadır.");
+                }
+
+                return Ok(orders);
+            }
+            catch (Exception ex)
+            {
+                // Sunucu konsoluna hata detayını yazdır
+                Console.WriteLine($"GetOrders metodunda hata oluştu: {ex.Message}");
+                // DEBUG: Hata detayını tarayıcıya göndermek için
+                return StatusCode(500, $"Sipariş verileri yüklenirken bir hata oluştu: {ex.Message}");
+            }
+        }
     }
+    
 }

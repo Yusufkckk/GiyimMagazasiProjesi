@@ -3,16 +3,68 @@
   "WorkspaceRootPath": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.client\\src\\pages\\checkoutpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|solutionrelative:giyimmagazasi.client\\src\\pages\\checkoutpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.client\\src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|solutionrelative:giyimmagazasi.client\\src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.client\\src\\pages\\orderhistorypage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|solutionrelative:giyimmagazasi.client\\src\\pages\\orderhistorypage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.client\\src\\pages\\orderhistory.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|solutionrelative:giyimmagazasi.client\\src\\pages\\orderhistory.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.client\\src\\pages\\authpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|solutionrelative:giyimmagazasi.client\\src\\pages\\authpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.client\\src\\pages\\authpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|solutionrelative:giyimmagazasi.client\\src\\pages\\authpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|solutionrelative:giyimmagazasi.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.client\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|solutionrelative:giyimmagazasi.client\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.server\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|solutionrelative:giyimmagazasi.server\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.server\\data\\uygulamadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|solutionrelative:giyimmagazasi.server\\data\\uygulamadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.server\\models\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|solutionrelative:giyimmagazasi.server\\models\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.server\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|solutionrelative:giyimmagazasi.server\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.client\\src\\pages\\checkoutpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|solutionrelative:giyimmagazasi.client\\src\\pages\\checkoutpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.server\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|solutionrelative:giyimmagazasi.server\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.server\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|solutionrelative:giyimmagazasi.server\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|solutionrelative:giyimmagazasi.server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.server\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|solutionrelative:giyimmagazasi.server\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.client\\vite.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
@@ -35,10 +87,6 @@
       "RelativeMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|solutionrelative:giyimmagazasi.client\\tsconfig.app.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|solutionrelative:giyimmagazasi.server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.client\\src\\productcard.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|solutionrelative:giyimmagazasi.client\\src\\productcard.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
@@ -55,28 +103,12 @@
       "RelativeMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|solutionrelative:giyimmagazasi.client\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.server\\data\\uygulamadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|solutionrelative:giyimmagazasi.server\\data\\uygulamadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.server\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|solutionrelative:giyimmagazasi.server\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.server\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|solutionrelative:giyimmagazasi.server\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.server\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|solutionrelative:giyimmagazasi.server\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.server\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|solutionrelative:giyimmagazasi.server\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.server\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2D4D32C-7C83-4F00-BC53-66601D0EA19B}|GiyimMagazasi.Server\\GiyimMagazasi.Server.csproj|solutionrelative:giyimmagazasi.server\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.client\\src\\adminpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
@@ -91,24 +123,8 @@
       "RelativeMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|solutionrelative:giyimmagazasi.client\\src\\productdetail.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.client\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|solutionrelative:giyimmagazasi.client\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.client\\src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|solutionrelative:giyimmagazasi.client\\src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.client\\src\\pages\\authpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|solutionrelative:giyimmagazasi.client\\src\\pages\\authpage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.client\\src\\services\\authservice.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|solutionrelative:giyimmagazasi.client\\src\\services\\authservice.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|c:\\users\\yusuf\\source\\repos\\giyimmagazasiprojesi\\giyimmagazasi\\giyimmagazasi.client\\src\\pages\\authpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{D6AA53EF-9EF9-15A6-64AB-2804499AD5FF}|giyimmagazasi.client\\giyimmagazasi.client.esproj|solutionrelative:giyimmagazasi.client\\src\\pages\\authpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -118,7 +134,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Bookmark",
@@ -134,189 +150,84 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "tsconfig.node.json",
-              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\tsconfig.node.json",
-              "RelativeDocumentMoniker": "giyimmagazasi.client\\tsconfig.node.json",
-              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\tsconfig.node.json",
-              "RelativeToolTip": "giyimmagazasi.client\\tsconfig.node.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-26T09:11:38.598Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "tsconfig.app.json",
-              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\tsconfig.app.json",
-              "RelativeDocumentMoniker": "giyimmagazasi.client\\tsconfig.app.json",
-              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\tsconfig.app.json",
-              "RelativeToolTip": "giyimmagazasi.client\\tsconfig.app.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-26T09:11:36.516Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "OrdersController.cs",
-              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Controllers\\OrdersController.cs",
-              "RelativeDocumentMoniker": "GiyimMagazasi.Server\\Controllers\\OrdersController.cs",
-              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Controllers\\OrdersController.cs",
-              "RelativeToolTip": "GiyimMagazasi.Server\\Controllers\\OrdersController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAowEcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T09:11:22.397Z",
+              "Title": "OrderHistoryPage.tsx",
+              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\pages\\OrderHistoryPage.tsx",
+              "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\pages\\OrderHistoryPage.tsx",
+              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\pages\\OrderHistoryPage.tsx",
+              "RelativeToolTip": "giyimmagazasi.client\\src\\pages\\OrderHistoryPage.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-09-27T08:40:15.374Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Program.cs",
+              "RelativeDocumentMoniker": "GiyimMagazasi.Server\\Program.cs",
+              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Program.cs",
+              "RelativeToolTip": "GiyimMagazasi.Server\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-27T09:00:24.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Models\\Order.cs",
               "RelativeDocumentMoniker": "GiyimMagazasi.Server\\Models\\Order.cs",
               "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Models\\Order.cs",
               "RelativeToolTip": "GiyimMagazasi.Server\\Models\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-26T09:10:58.786Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CartContext.tsx",
-              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\CartContext.tsx",
-              "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\CartContext.tsx",
-              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\CartContext.tsx",
-              "RelativeToolTip": "giyimmagazasi.client\\src\\CartContext.tsx",
-              "ViewState": "AgIAACMAAAAAAAAAAAAQwD8AAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-09-26T09:08:11.313Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CartContext.ts",
-              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\CartContext.ts",
-              "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\CartContext.ts",
-              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\CartContext.ts",
-              "RelativeToolTip": "giyimmagazasi.client\\src\\CartContext.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-09-26T09:08:10.322Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "package.json",
-              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\package.json",
-              "RelativeDocumentMoniker": "giyimmagazasi.client\\package.json",
-              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\package.json",
-              "RelativeToolTip": "giyimmagazasi.client\\package.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-26T09:07:20.02Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "packages.config",
-              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\packages.config",
-              "RelativeDocumentMoniker": "giyimmagazasi.client\\packages.config",
-              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\packages.config",
-              "RelativeToolTip": "giyimmagazasi.client\\packages.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-09-26T09:07:18.981Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "vite.config.ts",
-              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\vite.config.ts",
-              "RelativeDocumentMoniker": "giyimmagazasi.client\\vite.config.ts",
-              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\vite.config.ts",
-              "RelativeToolTip": "giyimmagazasi.client\\vite.config.ts",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAADUAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-09-23T07:28:22.062Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CheckoutPage.tsx",
-              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\pages\\CheckoutPage.tsx",
-              "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\pages\\CheckoutPage.tsx",
-              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\pages\\CheckoutPage.tsx*",
-              "RelativeToolTip": "giyimmagazasi.client\\src\\pages\\CheckoutPage.tsx*",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAmwF4AAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-09-25T10:02:11.386Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 8,
               "Title": "UygulamaDbContext.cs",
               "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Data\\UygulamaDbContext.cs",
               "RelativeDocumentMoniker": "GiyimMagazasi.Server\\Data\\UygulamaDbContext.cs",
               "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Data\\UygulamaDbContext.cs",
               "RelativeToolTip": "GiyimMagazasi.Server\\Data\\UygulamaDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-26T09:05:38.11Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "GiyimMagazasi.Server\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "GiyimMagazasi.Server\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T09:05:40.949Z",
+              "DocumentIndex": 6,
+              "Title": "App.tsx",
+              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\App.tsx",
+              "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\App.tsx",
+              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\App.tsx",
+              "RelativeToolTip": "giyimmagazasi.client\\src\\App.tsx",
+              "ViewState": "AgIAALIAAAAAAAAAAAAAAMIAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-09-17T13:38:26.595Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Models\\User.cs",
-              "RelativeDocumentMoniker": "GiyimMagazasi.Server\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Models\\User.cs",
-              "RelativeToolTip": "GiyimMagazasi.Server\\Models\\User.cs",
+              "DocumentIndex": 11,
+              "Title": "CheckoutPage.tsx",
+              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\pages\\CheckoutPage.tsx",
+              "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\pages\\CheckoutPage.tsx",
+              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\pages\\CheckoutPage.tsx",
+              "RelativeToolTip": "giyimmagazasi.client\\src\\pages\\CheckoutPage.tsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T09:05:34.133Z",
-              "EditorCaption": ""
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-09-25T10:02:11.386Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "GiyimMagazasi.Server\\Models\\Category.cs",
-              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Models\\Category.cs",
-              "RelativeToolTip": "GiyimMagazasi.Server\\Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T09:03:26.275Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 15,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Models\\Product.cs",
               "RelativeDocumentMoniker": "GiyimMagazasi.Server\\Models\\Product.cs",
@@ -324,12 +235,221 @@
               "RelativeToolTip": "GiyimMagazasi.Server\\Models\\Product.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T09:03:22.525Z",
+              "WhenOpened": "2025-09-26T09:03:22.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Models\\User.cs",
+              "RelativeDocumentMoniker": "GiyimMagazasi.Server\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Models\\User.cs",
+              "RelativeToolTip": "GiyimMagazasi.Server\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T09:05:34.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "GiyimMagazasi.Server\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Models\\Category.cs",
+              "RelativeToolTip": "GiyimMagazasi.Server\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T09:03:26.275Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthPage.css",
+              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\pages\\AuthPage.css",
+              "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\pages\\AuthPage.css",
+              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\pages\\AuthPage.css",
+              "RelativeToolTip": "giyimmagazasi.client\\src\\pages\\AuthPage.css",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-22T07:31:42.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthPage.tsx",
+              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\pages\\AuthPage.tsx",
+              "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\pages\\AuthPage.tsx",
+              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\pages\\AuthPage.tsx",
+              "RelativeToolTip": "giyimmagazasi.client\\src\\pages\\AuthPage.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-09-22T07:30:31.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.css",
+              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\App.css",
+              "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\App.css",
+              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\App.css",
+              "RelativeToolTip": "giyimmagazasi.client\\src\\App.css",
+              "ViewState": "AgIAALUAAAAAAAAAAAAAANEAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-19T07:50:19.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderHistory.css",
+              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\pages\\OrderHistory.css",
+              "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\pages\\OrderHistory.css",
+              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\pages\\OrderHistory.css",
+              "RelativeToolTip": "giyimmagazasi.client\\src\\pages\\OrderHistory.css",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAwwBsAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-27T10:01:48.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "GiyimMagazasi.Server\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "GiyimMagazasi.Server\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAUwHAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T09:11:22.397Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "OrderDto.cs",
+              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Models\\OrderDto.cs",
+              "RelativeDocumentMoniker": "GiyimMagazasi.Server\\Models\\OrderDto.cs",
+              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Models\\OrderDto.cs",
+              "RelativeToolTip": "GiyimMagazasi.Server\\Models\\OrderDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-27T09:18:45.893Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "GiyimMagazasi.Server\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "GiyimMagazasi.Server\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAIwGQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T06:49:50.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "packages.config",
+              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\packages.config",
+              "RelativeDocumentMoniker": "giyimmagazasi.client\\packages.config",
+              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\packages.config",
+              "RelativeToolTip": "giyimmagazasi.client\\packages.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-09-26T09:07:18.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "package.json",
+              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\package.json",
+              "RelativeDocumentMoniker": "giyimmagazasi.client\\package.json",
+              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\package.json",
+              "RelativeToolTip": "giyimmagazasi.client\\package.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-26T09:07:20.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "CartContext.ts",
+              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\CartContext.ts",
+              "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\CartContext.ts",
+              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\CartContext.ts",
+              "RelativeToolTip": "giyimmagazasi.client\\src\\CartContext.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-09-26T09:08:10.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CartContext.tsx",
+              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\CartContext.tsx",
+              "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\CartContext.tsx",
+              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\CartContext.tsx",
+              "RelativeToolTip": "giyimmagazasi.client\\src\\CartContext.tsx",
+              "ViewState": "AgIAACMAAAAAAAAAAAAQwD8AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-09-26T09:08:11.313Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "vite.config.ts",
+              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\vite.config.ts",
+              "RelativeDocumentMoniker": "giyimmagazasi.client\\vite.config.ts",
+              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\vite.config.ts",
+              "RelativeToolTip": "giyimmagazasi.client\\vite.config.ts",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAADUAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-09-23T07:28:22.062Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "tsconfig.node.json",
+              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\tsconfig.node.json",
+              "RelativeDocumentMoniker": "giyimmagazasi.client\\tsconfig.node.json",
+              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\tsconfig.node.json",
+              "RelativeToolTip": "giyimmagazasi.client\\tsconfig.node.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-26T09:11:38.598Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "tsconfig.app.json",
+              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\tsconfig.app.json",
+              "RelativeDocumentMoniker": "giyimmagazasi.client\\tsconfig.app.json",
+              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\tsconfig.app.json",
+              "RelativeToolTip": "giyimmagazasi.client\\tsconfig.app.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-26T09:11:36.516Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "GiyimMagazasi.Server\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "GiyimMagazasi.Server\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T09:05:40.949Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "ProductCard.tsx",
               "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\ProductCard.tsx",
               "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\ProductCard.tsx",
@@ -337,12 +457,11 @@
               "RelativeToolTip": "giyimmagazasi.client\\src\\ProductCard.tsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-09-17T13:42:20.491Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-17T13:42:20.491Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 27,
               "Title": "AdminPage.tsx",
               "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\AdminPage.tsx",
               "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\AdminPage.tsx",
@@ -350,25 +469,11 @@
               "RelativeToolTip": "giyimmagazasi.client\\src\\AdminPage.tsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAN4AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-09-23T06:39:44.862Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-23T06:39:44.862Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "GiyimMagazasi.Server\\Controllers\\ProductsController.cs",
-              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "GiyimMagazasi.Server\\Controllers\\ProductsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T06:49:50.221Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 25,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\GiyimMagazasi.Server\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "GiyimMagazasi.Server\\Controllers\\AuthController.cs",
@@ -376,12 +481,11 @@
               "RelativeToolTip": "GiyimMagazasi.Server\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T07:49:07.902Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-22T07:49:07.902Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 23,
               "Title": "Cart.tsx",
               "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\Cart.tsx",
               "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\Cart.tsx",
@@ -389,12 +493,11 @@
               "RelativeToolTip": "giyimmagazasi.client\\src\\Cart.tsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-09-19T08:36:42.364Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T08:36:42.364Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 28,
               "Title": "AdminPage.css",
               "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\AdminPage.css",
               "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\AdminPage.css",
@@ -402,24 +505,11 @@
               "RelativeToolTip": "giyimmagazasi.client\\src\\AdminPage.css",
               "ViewState": "AgIAAHYAAAAAAAAAAAAwwIsAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-09-23T06:40:28.344Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-23T06:40:28.344Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "App.tsx",
-              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\App.tsx",
-              "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\App.tsx",
-              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\App.tsx",
-              "RelativeToolTip": "giyimmagazasi.client\\src\\App.tsx",
-              "ViewState": "AgIAAKAAAAAAAAAAAAAgwAkAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-09-17T13:38:26.595Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 29,
               "Title": "ProductDetail.tsx",
               "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\ProductDetail.tsx",
               "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\ProductDetail.tsx",
@@ -431,31 +521,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "App.css",
-              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\App.css",
-              "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\App.css",
-              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\App.css",
-              "RelativeToolTip": "giyimmagazasi.client\\src\\App.css",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAAAM0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-09-19T07:50:19.772Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "AuthPage.tsx",
-              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\pages\\AuthPage.tsx",
-              "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\pages\\AuthPage.tsx",
-              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\pages\\AuthPage.tsx",
-              "RelativeToolTip": "giyimmagazasi.client\\src\\pages\\AuthPage.tsx",
-              "ViewState": "AgIAADgAAAAAAAAAAAAQwFgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-09-22T07:30:31.451Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 30,
               "Title": "authService.ts",
               "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\services\\authService.ts",
               "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\services\\authService.ts",
@@ -464,18 +530,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2025-09-22T07:20:51.47Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "AuthPage.css",
-              "DocumentMoniker": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\pages\\AuthPage.css",
-              "RelativeDocumentMoniker": "giyimmagazasi.client\\src\\pages\\AuthPage.css",
-              "ToolTip": "C:\\Users\\yusuf\\source\\repos\\GiyimMagazasiProjesi\\GiyimMagazasi\\giyimmagazasi.client\\src\\pages\\AuthPage.css",
-              "RelativeToolTip": "giyimmagazasi.client\\src\\pages\\AuthPage.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-09-22T07:31:42.851Z"
             }
           ]
         }
