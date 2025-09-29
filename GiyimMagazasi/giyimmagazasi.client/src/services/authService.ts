@@ -39,6 +39,11 @@ export const login = async (email: string, password: string): Promise<string> =>
     }
 };
 
+// Yeni fonksiyonu ekliyoruz
+export const getToken = (): string | null => {
+    return localStorage.getItem('user_token');
+};
+
 export const register = async (email: string, password: string): Promise<boolean> => {
     try {
         const response = await fetch(`${API_BASE_URL}/register`, {

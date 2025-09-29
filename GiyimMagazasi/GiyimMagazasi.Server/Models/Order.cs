@@ -3,6 +3,7 @@
     // Front-End'den gelen sipariş verilerini temsil eder (DTO)
     public class Order
     {
+
         public int Id { get; set; } // Sipariş ID'si (Primary Key)
         public string CustomerName { get; set; }
         public string CustomerAddress { get; set; }

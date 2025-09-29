@@ -12,7 +12,7 @@ import { logout, isAuthenticated, getUserInfo } from './services/authService';
 import type { UserInfo } from './services/authService';
 import AuthPage from './pages/AuthPage';
 import AdminPage from './AdminPage';
-import { FaSearch, FaShoppingBag } from 'react-icons/fa';
+import { FaSearch, FaShoppingBag, FaCog } from 'react-icons/fa';
 import OrderHistoryPage from './pages/OrderHistoryPage';
 
 
@@ -120,6 +120,9 @@ const AppContent = () => {
     const [userName, setUserName] = useState('');
     const [userRole, setUserRole] = useState('');
 
+    // ⚙️ YENİ STATE: Ayarlar menüsünün açık/kapalı durumu
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
     useEffect(() => {
         const checkAuth = async () => {
             const loggedIn = isAuthenticated();
@@ -147,17 +150,41 @@ const AppContent = () => {
         setIsLoggedIn(false);
         setUserName('');
         setUserRole('');
+        setIsDropdownOpen(false); 
         // alert yerine konsol logu kullanıldı
         console.log("Başarıyla çıkış yapıldı!");
     };
 
+    // ⚙️ YENİ FONKSİYON: Dropdown menüyü açıp kapama
+    const toggleDropdown = () => {
+        setIsDropdownOpen(prev => !prev);
+    };
+
+    // Menü dışına tıklayınca menüyü kapatmak için useEffect
+    useEffect(() => {
+        const handleOutsideClick = (event: MouseEvent) => {
+            const dropdown = document.querySelector('.settings-dropdown');
+            if (dropdown && !dropdown.contains(event.target as Node)) {
+                setIsDropdownOpen(false);
+            }
+        };
+
+        if (isDropdownOpen) {
+            document.addEventListener('mousedown', handleOutsideClick);
+        } else {
+            document.removeEventListener('mousedown', handleOutsideClick);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleOutsideClick);
+        };
+    }, [isDropdownOpen]);
+
     return (
         <Router>
             <div className="main-content">
-                {/* YENİ HEADER KODU */}
                 <header className="header">
                     <div className="header-logo">
-                        {/* H1 etiketini Link içine aldık, böylece tıklanabilir oldu */}
                         <h1><Link to="/">Kocak Fashion</Link></h1>
                     </div>
 
@@ -172,7 +199,6 @@ const AppContent = () => {
                                     <Link to="/categories/mont">Mont</Link>
                                     <Link to="/categories/kaban">Kaban</Link>
                                     <Link to="/categories/eşofman">Eşofman</Link>
-                                    {/* Mevcut Kategoriler */}
                                     <Link to="/categories/gomlek">Gömlek</Link>
                                     <Link to="/categories/t-shirt">T-shirt</Link>
                                     <Link to="/categories/pantolon">Pantolon</Link>
@@ -190,15 +216,48 @@ const AppContent = () => {
 
                     <div className="header-actions">
                         <Link to="/search" className="icon"><FaSearch /></Link>
-                        {/* Sepet öğe sayısını gösteren ikon */}
                         <Link to="/cart" className="icon"><FaShoppingBag /> ({itemCount})</Link>
-                        {isLoggedIn && userRole === 'admin' && (
-                            <Link to="/order-history" className="order-history-button">Sipariş Geçmişi</Link>
-                        )}
 
-                        {userRole === 'admin' && <Link to="/admin" className="admin-button">Yönetim Paneli</Link>}
+                        {/* ⚙️ YENİ AYARLAR DROPDOWN MENÜSÜ */}
                         {isLoggedIn ? (
-                            <button onClick={handleSignOut} className="logout-button">{userName} - Çıkış Yap</button>
+                            <div className="settings-dropdown">
+                                <button onClick={toggleDropdown} className="settings-button" title="Ayarlar ve Profil">
+                                    <FaCog />
+                                </button>
+                                {isDropdownOpen && (
+                                    <div className="dropdown-menu">
+                                        <div style={{ padding: '10px 15px', borderBottom: '1px solid #eee', fontWeight: 'bold', color: '#555' }}>
+                                            Hoşgeldin, {userName}
+                                        </div>
+
+                                        {/* SADECE ADMIN HESAPLARI İÇİN GÖSTERİLECEK KISIM */}
+                                        {userRole === 'admin' && (
+                                            <>
+                                                <Link
+                                                    to="/order-history"
+                                                    className="dropdown-item"
+                                                    onClick={() => setIsDropdownOpen(false)} // Tıklayınca menüyü kapat
+                                                >
+                                                    Sipariş Geçmişi
+                                                </Link>
+                                                <Link
+                                                    to="/admin"
+                                                    className="dropdown-item"
+                                                    onClick={() => setIsDropdownOpen(false)} // Tıklayınca menüyü kapat
+                                                >
+                                                    Yönetim Paneli
+                                                </Link>
+                                            </>
+                                        )}
+                                    </div>
+                                )}
+                            </div>
+                        ) : null}
+
+
+                        {/* Giriş/Çıkış Butonu */}
+                        {isLoggedIn ? (
+                            <button onClick={handleSignOut} className="logout-button">Çıkış Yap</button>
                         ) : (
                             <Link to="/auth" className="login-button">Giriş Yap</Link>
                         )}
@@ -208,7 +267,7 @@ const AppContent = () => {
                 <div className="container">
                     <Routes>
                         <Route path="/" element={<HomePageContent />} />
-                        <Route path="/categories/:categoryName" element={<HomePageContent />} /> {/* YENİ KATEGORİ ROTASI */}
+                        <Route path="/categories/:categoryName" element={<HomePageContent />} />
                         <Route path="/products/:id" element={<ProductDetail />} />
                         <Route path="/cart" element={<Cart />} />
                         <Route path="/checkout" element={<CheckoutPage />} />

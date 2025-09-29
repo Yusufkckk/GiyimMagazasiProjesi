@@ -643,4 +643,84 @@ html,
     .product-list {
         grid-template-columns: 1fr;
     }
+
+}
+/ /* Ayarlar Açılır Menüsü için CSS */
+.settings-dropdown {
+    position: relative;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+}
+
+.settings-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em; /* İkon boyutu */
+    color: #555; /* İkon rengi koyu gri */
+    padding: 5px;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+    .settings-button:hover {
+        color: #00bcd4; /* Hover rengi turkuaz */
+    }
+
+/* Dropdown Menü Stili (Yeni eklenenler) */
+.dropdown-menu {
+    /* Konumlandırma */
+    position: absolute;
+    top: 100%; /* Butonun hemen altına */
+    right: 0;
+    /* Görünüm */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    border-radius: 8px; /* Köşe yuvarlaklığı */
+    overflow: hidden; /* İçerik taşmasını engeller */
+    animation: fadeIn 0.3s ease-out; /* Menü açılış animasyonu */
+}
+
+/* Menü İçindeki Öğeler */
+.dropdown-item {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9em;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+}
+
+    .dropdown-item:hover {
+        background-color: #f0f0f0;
+    }
+
+/* Animasyon Tanımı */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Kullanıcı bilgisi satırı için */
+.dropdown-user-info {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    font-weight: bold;
+    color: #555;
+    white-space: nowrap;
 }
