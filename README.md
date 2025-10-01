@@ -68,17 +68,33 @@ Filtreleme ve Sıralama: Kullanıcıların ürünleri kategoriye göre filtrelem
 fiyat artan/azalan gibi kriterlere göre sıralayabilmesi için işlevsel arayüz elemanları sunulmuştur.
 
 
+🖼️ Ekran Görüntüleri
+
+1.Ana Sayfa
+<img width="1895" height="955" alt="Image" src="https://github.com/user-attachments/assets/a5d4d04a-f622-407f-b961-11bcfa6f8479" />
 
 
+2.Ürün Detay Sayfası
+
+<img width="1905" height="953" alt="Image" src="https://github.com/user-attachments/assets/a0e68f80-b95c-4f22-82db-44f8b63882e7" />
+
+3. Sepet Menüsü
+   
+<img width="1903" height="951" alt="Image" src="https://github.com/user-attachments/assets/8ed0c41b-dec7-4cae-9a74-d0e43656cc3c" />
 
 
+4. Sipariş Ekranı
+   
+<img width="1905" height="951" alt="Image" src="https://github.com/user-attachments/assets/fe26bed1-2653-4094-a198-fc2bcec1f825" />
 
+5. Sipariş Geçmişi
 
+<img width="1892" height="951" alt="Image" src="https://github.com/user-attachments/assets/5d2d0391-b8f4-40a7-83f8-87b1cd828554" />
 
+6. Yönetim Paneli
 
+<img width="1894" height="954" alt="Image" src="https://github.com/user-attachments/assets/ef2a4ccb-393c-4c55-9228-ea7bb5c61185" />
 
+7. Giriş / Kayıt ol Ekranı
 
-
-
-
-
+<img width="1894" height="953" alt="Image" src="https://github.com/user-attachments/assets/6b64f7b1-827b-4f37-a2aa-98a03ff7e388" />
